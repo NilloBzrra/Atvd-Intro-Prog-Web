@@ -16,6 +16,7 @@
 	--branco-fundo: #fffdf0;
 	--yellow-deep: #c9ae00;
 	--text: #292710;
+    --fundo: #16171a;
 }
 
 body {
@@ -76,8 +77,8 @@ footer {
 
 body {
 	margin: 0;
-	color: var(--text);
-	background: var(--branco-fundo);
+	color: var(--branco-fundo);
+	background: var(--fundo);
 	font-family: 'Helvetica', sans-serif;
 }
 
@@ -85,18 +86,9 @@ h1 {
 	color: var(--vermelho);
 }
 
-header,
-nav,
-footer {
-	background-color: var(--js-yellow);
-}
 
-main,
-section,
-article,
-.card {
-	background-color: var(--yellow-light);
-}
+
+
 
 button,
 input[type="submit"],
