@@ -1,0 +1,44 @@
+:root {
+	--js-yellow: #f7df1e;
+	--yellow-light: #fff9cf;
+	--yellow-pale: #fffdf0;
+	--yellow-deep: #c9ae00;
+	--text: #292710;
+}
+
+body {
+	margin: 0;
+	color: var(--text);
+	background: var(--yellow-pale);
+}
+
+header,
+nav,
+footer {
+	background-color: var(--js-yellow);
+}
+
+main,
+section,
+article,
+.card {
+	background-color: var(--yellow-light);
+}
+
+button,
+input[type="submit"],
+.button {
+	color: var(--text);
+	background-color: var(--js-yellow);
+	border: 2px solid var(--yellow-deep);
+}
+
+button:hover,
+input[type="submit"]:hover,
+.button:hover {
+	background-color: #f0d400;
+}
+
+a {
+	color: #6b5c00;
+}
