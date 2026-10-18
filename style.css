@@ -3,8 +3,22 @@
 
 body {
     background-color: #1d1d1d;
+    display: flex;
+    flex-direction: column;
     text-align: justify;
     color: #F7dF1e;
+}
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: center; 
+}
+
+.logo {
+    display: inline-block;
+    align-items: center;
+    width: 3cm;
+    height: 3cm;
 }
 p {
  font-family: "Limelight", sans-serif;
