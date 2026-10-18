@@ -1,94 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-:root {
-	--vermelho: #ac1515;
-	--js-yellow: #f7df1e;
-	--yellow-light: #ececec;
-	--branco-fundo: #fffdf0;
-	--yellow-deep: #c9ae00;
-	--text: #292710;
-    --fundo: #16171a;
-}
 body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr auto;
-    grid-template-areas:
-        "cabecalho"
-        "destaque"
-        "principal"
-        "rodape";
+    background-color: #1d1d1d;
+    text-align: justify;
+    color: #F7dF1e;
 }
-header {
-    grid-area: cabecalho;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    width: 100%;
-    padding: 15px 30px;
+p {
+ font-family: "Limelight", sans-serif;
+ font-weight: 400;
+ font-style: bold;
 }
-.subtexto {
-    grid-area: destaque;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 40px 20px;
-}
-main {
-    grid-area: principal;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 20px;
-    gap: 30px;
-}
-footer {
-    grid-area: rodape;
-    text-align: center;
-    padding: 15px;
-    font-size: 90%;
-    color: var(--cor-cinza-escuro);
-    width: 100%;
-}
-body {
-	margin: 0;
-	color: var(--branco-fundo);
-	background: var(--fundo);
-	font-family: 'Helvetica', sans-serif;
+.text {
+ font-family: "Limelight", sans-serif;
+ font-weight: 400;
+ font-style: normal;
 }
 h1 {
-	color: var(--vermelho);
+ font-family: "Limelight", sans-serif;
+ font-weight: 400;
+ font-style: normal;
+ text-align: center;
+ font-size: 50px;
 }
-
-
-
-
-
-button,
-input[type="submit"],
-.button {
-	color: var(--text);
-	background-color: var(--js-yellow);
-	border: 2px solid var(--yellow-deep);
+h2 {
+ font-family: "Limelight", sans-serif;
+ font-weight: 400;
+ font-style: normal;
+ text-align: center;
+ font-size: 30px;
 }
-
-button:hover,
-input[type="submit"]:hover,
-.button:hover {
-	background-color: #f0d400;
+button {
+ background-color: #F7dF1e;
+ font-size: 18px;
+ color: #1d1d1d;
+ border-radius: 15px;
+ width: 150px;
+ height: 55px;
 }
-
-a {
-	color: #6b5c00;
+.buttons {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: 30px;
 }
