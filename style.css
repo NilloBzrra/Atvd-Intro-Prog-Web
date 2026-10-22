@@ -2,28 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
 
 body {
-    background-color: #1d1d1d;
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    color: #F7dF1e;
+background-color: #1d1d1d;
+display: flex;
+flex-direction: column;
+text-align: justify;
+color: #F7dF1e;
 }
 .cabecalho {
-  display: flex;
-  align-items: center;
-  gap: center; 
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 30px; 
 }
 
 .logo {
-    display: inline-block;
-    align-items: center;
-    width: 3cm;
-    height: 3cm;
+display: inline-block;
+justify-content: center;
+align-items: center;
+width: 4cm;
+height: 4cm;
 }
 p {
- font-family: "Limelight", sans-serif;
- font-weight: 400;
- font-style: bold;
+font-family: "Limelight", sans-serif;
+font-weight: 400;
+font-style: bold;
 }
 .text {
  font-family: "Limelight", sans-serif;
@@ -31,31 +33,31 @@ p {
  font-style: normal;
 }
 h1 {
- font-family: "Limelight", sans-serif;
- font-weight: 400;
- font-style: normal;
- text-align: center;
- font-size: 50px;
+font-family: "Limelight", sans-serif;
+font-weight: 400;
+font-style: normal;
+text-align: center;
+font-size: 50px;
 }
 h2 {
- font-family: "Limelight", sans-serif;
- font-weight: 400;
- font-style: normal;
- text-align: center;
- font-size: 30px;
+font-family: "Limelight", sans-serif;
+font-weight: 400;
+font-style: normal;
+text-align: center;
+font-size: 30px;
 }
 button {
- background-color: #F7dF1e;
- font-size: 18px;
- color: #1d1d1d;
- border-radius: 15px;
- width: 150px;
- height: 55px;
+background-color: #F7dF1e;
+font-size: 18px;
+color: #1d1d1d;
+border-radius: 15px;
+width: 150px;
+height: 55px;
 }
 .buttons {
- display: flex;
- justify-content: center;
- align-items: center;
- flex-wrap: wrap;
- gap: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 30px;
 }
