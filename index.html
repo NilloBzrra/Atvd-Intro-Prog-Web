@@ -3,29 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <script src="script.js"></script>
-    <title>Desenvolvendo Habilidades</title>
+    <title>JS Mastery - Início</title>
+    <link rel="stylesheet" href="formato.css">
 </head>
-<body>  
-    <header class="cabecalho">
-  <img src="logo-js.webp" alt="Logo do JavaScript" class="logo">
-  <div class="textos">
-    <h1 class="titulo">JavaScript</h1>
-    <h2 class="subtitulo">Seguraça Web</h2>
-  </div>
-</header>
-    <div class="welcome-message">
-    <p>Bem-vindos ao mundo do JavaScript!</p>
-    </div>
-    <p class="textos">O JavaScript é uma linguagem de programação essencial para o desenvolvimento web. Ele permite criar páginas interativas, dinâmicas e responsivas, tornando a experiência do usuário mais envolvente.</p>
-    <p class="textos">Com o JavaScript, você pode manipular elementos HTML, responder a eventos, validar formulários, criar animações e muito mais. É uma ferramenta poderosa que, quando dominada, abre portas para oportunidades incríveis no desenvolvimento web.</p>
-    <p class="textos">Ao longo deste curso, você aprenderá os fundamentos do JavaScript, desde variáveis e tipos de dados até funções, objetos e manipulação do DOM. Prepare-se para explorar o mundo da programação web e desenvolver habilidades que serão valiosas em sua carreira como desenvolvedor.</p>
-    <p class="textos">Vamos começar nossa jornada no JavaScript e descobrir como essa linguagem pode transformar suas habilidades de desenvolvimento web!</p>
-    <div class="buttons">
-    <button><a href="modulo1.html" class="button">Módulo 1</a></button>
-    <button><a href="modulo2.html" class="button">Módulo 2</a></button>
-    <button><a href="modulo3.html" class="button">Módulo 3</a></button>
-    </div>
+<body>
+    <header>
+        <h1>JavaScript Mastery</h1>
+        <p>A linguagem da web</p>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h2>Bem-vindo ao Curso - JavaScript Mastery</h2>
+            <p>Aprenda JavaScript do zero ao avançado. Escolha um dos módulos abaixo para iniciar sua jornada de aprendizado ou cadastre-se para salvar seu progresso.</p>
+            
+            <div class="modulos-grid">
+                <a href="modulo1.html" class="btn-modulo">
+                    <h3>Módulo 1</h3>
+                    <span>Fundamentos e Variáveis</span>
+                </a>
+                <a href="modulo2.html" class="btn-modulo">
+                    <h3>Módulo 2</h3>
+                    <span>Estruturas de Controle</span>
+                </a>
+                <a href="modulo3.html" class="btn-modulo">
+                    <h3>Módulo 3</h3>
+                    <span>Manipulação de DOM</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="cadastro-section">
+            <div class="form-container">
+                <h2>Crie sua conta</h2>
+                <form id="formCadastro">
+                    <div class="input-group">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="Crie uma senha forte" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Realizar Cadastro</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="forms.js"></script>
 </body>
 </html>

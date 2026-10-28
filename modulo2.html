@@ -3,20 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <title>Módulo 2</title>
-    <link href="style.css" rel="stylesheet">
+    <title>JS Mastery - Módulo 2</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <img src="logo-js.webp" alt="Logo do JavaScript" class="logo">
-
-        <div class="textos">
-    <h1 class="titulo">5 passos em JavaScript</h1>
-    <h2 class="subtitulo">Serão 5 atividades intermediárias</h2>
-        </div>
+    <header>
+        <h1>JavaScript Mastery</h1>
+        <p>A linguagem da web</p>
     </header>
+    <nav>
+        <a href="index.html" class="active">Início</a>
+        <a href="modulo1.html">Módulo 1: Fundamentos</a>
+        <a href="modulo2.html" class="active">Módulo 2: Fluxo</a>
+        <a href="modulo3.html">Módulo 3: DOM</a>
+    </nav>
+    <main>
+        <h2>Módulo 2: Estruturas de Controle</h2>
+        <p>O fluxo de controle define a ordem em que as instruções são executadas usando condicionais e laços de repetição (loops).</p>
+        
+        <div class="code-block">
+            <code>
+                <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i <= <span class="number">3</span>; i++) {<br>
+                &nbsp;&nbsp;console.log(<span class="string">"Iteração "</span> + i);<br>
+                }
+            </code>
+        </div>
 
-    <p>Neste módulo, você vai aprender como iniciar a programação através da linguagem JavaScript</p>
+        <h3>Na prática</h3>
+        <p>Teste a execução de um loop <code>for</code> renderizando dados dinamicamente na tela:</p>
+        <button onclick="executarExemplo2()">Rodar Loop</button>
+        <div id="resultadoLoop" class="result-box"></div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>

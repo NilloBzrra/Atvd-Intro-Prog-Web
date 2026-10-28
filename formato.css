@@ -1,0 +1,191 @@
+:root {
+    --js-yellow: #F7DF1E;
+    --js-yellow-glow: rgba(247, 223, 30, 0.4);
+    --dark-bg: #1D1D1D;
+    --darker-bg: #121212;
+    --text-light: #E0E0E0;
+    --text-dark: #111111;
+    --card-bg: #242424;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 { margin-top: 0; }
+
+header {
+    background: linear-gradient(135deg, var(--js-yellow) 0%, #e3c914 100%);
+    color: var(--text-dark);
+    padding: 3rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: -1px;
+    margin-bottom: 0.2rem;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    color: var(--js-yellow);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #bbb;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+
+.modulos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.btn-modulo {
+    background-color: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    color: var(--text-light);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-modulo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--js-yellow);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.btn-modulo:hover::before { transform: scaleX(1); }
+
+.btn-modulo:hover {
+    background-color: var(--darker-bg);
+    border-color: var(--js-yellow);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px var(--js-yellow-glow);
+}
+
+.btn-modulo h3 {
+    color: var(--js-yellow);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn-modulo span {
+    font-size: 0.95rem;
+    color: #999;
+}
+
+.cadastro-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.form-container {
+    background-color: var(--card-bg);
+    padding: 3rem;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid #333;
+}
+
+.form-container h2 {
+    color: var(--js-yellow);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #bbb;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--js-yellow);
+    background-color: #222;
+    box-shadow: 0 0 0 3px var(--js-yellow-glow);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--js-yellow);
+    color: var(--text-dark);
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #e3c914;
+    transform: translateY(-2px);
+}

@@ -3,19 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <title>Módulo 3</title>
-    <link href="style.css" rel="stylesheet">
+    <title>JS Mastery - Módulo 3</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <header class="cabecalho">
-         <img src="logo-js.webp" alt="Logo do JavaScript" class="logo">
-
-        <div class="textos">
-            <h1 class="titulo">5 passos em JavaScript</h1>
-            <h2 class="subtitulo">Serão 5 atividades difíceis</h2>
-        </div>
+    <header>
+        <h1>JavaScript Mastery</h1>
+        <p>A linguagem da web</p>
     </header>
-    <p>Neste módulo, você vai aprender como iniciar a programação através da linguagem JavaScript</p>
+    <nav>
+        <a href="index.html" class="active">Início</a>
+        <a href="modulo1.html">Módulo 1: Fundamentos</a>
+        <a href="modulo2.html">Módulo 2: Fluxo</a>
+        <a href="modulo3.html" class="active">Módulo 3: DOM</a>
+    </nav>
+    <main>
+        <h2>Módulo 3: Manipulação de DOM</h2>
+        <p>O Document Object Model (DOM) permite que o JS interaja com a estrutura HTML, alterando estilos, textos e atributos em tempo real.</p>
+        
+        <div class="code-block">
+            <code>
+                <span class="keyword">const</span> el = document.getElementById(<span class="string">"alvo"</span>);<br>
+                el.style.backgroundColor = <span class="string">"#F7DF1E"</span>;
+            </code>
+        </div>
+
+        <h3>Na prática</h3>
+        <p>Clique no botão para injetar novas classes CSS e alterar o conteúdo da caixa abaixo:</p>
+        <div id="caixaDOM" class="result-box visible">Aguardando interação...</div>
+        <br>
+        <button onclick="executarExemplo3()">Transformar Elemento</button>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
