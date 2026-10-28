@@ -1,9 +1,9 @@
 :root {
-    --js-yellow: #F7DF1E;
-    --js-yellow-glow: rgba(247, 223, 30, 0.4);
+    --js-yellow: #ffe58f;
+    --js-yellow-glow: rgba(255, 242, 126, 0.4);
     --dark-bg: #1D1D1D;
     --darker-bg: #121212;
-    --text-light: #E0E0E0;
+    --text-light: #f3f3f3;
     --text-dark: #111111;
     --card-bg: #242424;
 }
@@ -20,7 +20,7 @@ body {
 h1, h2, h3 { margin-top: 0; }
 
 header {
-    background: linear-gradient(135deg, var(--js-yellow) 0%, #e3c914 100%);
+    background: linear-gradient(135deg, var(--js-yellow) 0%, #ffc13a 100%);
     color: var(--text-dark);
     padding: 3rem 1rem;
     text-align: center;
@@ -70,16 +70,34 @@ main {
 }
 
 .btn-modulo {
-    background-color: var(--card-bg);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Empurra o texto para a parte inferior */
+    aspect-ratio: 4 / 3; /* Define uma proporção mais quadrada/menos esticada */
     border: 1px solid #333;
     border-radius: 12px;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem;
     text-decoration: none;
     text-align: center;
     color: var(--text-light);
+    background-color: #1a1a1a; /* Cor de fundo para mesclar com o fade da imagem */
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    position: relative;
     overflow: hidden;
+    z-index: 1;
+}
+
+.btn-modulo .btn-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher todo o contêiner */
+    z-index: -1; /* Posiciona a imagem atrás do texto */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
 }
 
 .btn-modulo::before {
@@ -186,6 +204,6 @@ main {
 }
 
 .btn-submit:hover {
-    background-color: #e3c914;
+    background-color: #fffefd;
     transform: translateY(-2px);
 }
