@@ -244,3 +244,127 @@ main {
     background-color: #fffefd;
     transform: translateY(-2px);
 }
+
+.login {
+    box-sizing: border-box;
+    width: min(100% - 2rem, 440px);
+    margin: clamp(2rem, 9vh, 6rem) auto;
+    padding: clamp(1.75rem, 6vw, 2.75rem);
+    background: linear-gradient(145deg, #292929, var(--card-bg));
+    border: 1px solid #3b3b3b;
+    border-radius: 20px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+}
+
+.login::before {
+    content: "JS";
+    display: grid;
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 1.25rem;
+    place-items: center;
+    border: 1px solid rgba(255, 229, 143, 0.45);
+    border-radius: 16px;
+    background: rgba(255, 229, 143, 0.1);
+    color: var(--js-yellow);
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+}
+
+.login h1 {
+    margin-bottom: 0.25rem;
+    color: var(--text-light);
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+    letter-spacing: -0.04em;
+    text-align: center;
+}
+
+.login .subtitle {
+    margin: 0 0 2rem;
+    color: #aaa;
+    text-align: center;
+}
+
+.login form {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.login form label {
+    margin-top: 0.35rem;
+    color: #d0d0d0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.login form input {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 3.2rem;
+    padding: 0.8rem 0.95rem;
+    border: 1px solid #464646;
+    border-radius: 9px;
+    background-color: #191919;
+    color: var(--text-light);
+    font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login form input::placeholder {
+    color: #858585;
+}
+
+.login form input:focus {
+    outline: none;
+    border-color: var(--js-yellow);
+    box-shadow: 0 0 0 3px var(--js-yellow-glow);
+}
+
+.login form button {
+    width: 100%;
+    min-height: 3.2rem;
+    margin-top: 0.8rem;
+    border-radius: 9px;
+    background: linear-gradient(135deg, var(--js-yellow), #ffc13a);
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-weight: 700;
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.login form button:hover {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+}
+
+.login form button:focus-visible,
+.login a:focus-visible {
+    outline: 3px solid var(--js-yellow);
+    outline-offset: 3px;
+}
+
+.login .signup {
+    margin: 1.5rem 0 0;
+    color: #aaa;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.login a {
+    color: var(--js-yellow);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .login {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 16px;
+    }
+}
