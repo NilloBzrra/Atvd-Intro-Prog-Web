@@ -14,13 +14,34 @@ if (formQuiz) {
         };
 
         const respostasCorretas = respostasPorProva[prova];
-
         let acertos = 0;
 
+
+        formQuiz.querySelectorAll('label').forEach((label) => {
+            label.classList.remove('correta', 'errada');
+        });
+        formQuiz.querySelectorAll('fieldset').forEach((fs) => {
+            fs.classList.remove('questao-certa', 'questao-errada');
+        });
+
         for (const [questao, respostaCorreta] of Object.entries(respostasCorretas)) {
-            const resposta = formQuiz.querySelector(`input[name="${questao}"]:checked`);
-            if (resposta && resposta.value === respostaCorreta) {
+            const inputMarcado = formQuiz.querySelector(`input[name="${questao}"]:checked`);
+            const inputCorreto = formQuiz.querySelector(`input[name="${questao}"][value="${respostaCorreta}"]`);
+            const fieldset = inputCorreto ? inputCorreto.closest('fieldset') : null;
+
+            if (inputCorreto) {
+                inputCorreto.closest('label').classList.add('correta');
+            }
+
+            if (inputMarcado && inputMarcado.value === respostaCorreta) {
                 acertos++;
+                if (fieldset) fieldset.classList.add('questao-certa');
+            } else {
+                if (fieldset) fieldset.classList.add('questao-errada');
+
+                if (inputMarcado) {
+                    inputMarcado.closest('label').classList.add('errada');
+                }
             }
         }
 

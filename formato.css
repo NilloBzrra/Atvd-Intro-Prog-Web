@@ -1,8 +1,4 @@
-Conflito de *merge* do Git resolvido. Mantive todas as classes novas do `.quiz` que vieram do repositório remoto, removi os marcadores (`<<<<<<<`, `=======`, `>>>>>>>`) e eliminei o `:root` duplicado que estava no final do bloco remoto (preservando o `:root` completo do topo).
 
-Aqui está o `formato.css` limpo e pronto para salvar:
-
-```css
 :root {
     --js-yellow: #ffe388;
     --js-yellow-glow: rgba(255, 227, 136, 0.25);
@@ -748,4 +744,40 @@ button:active {
         opacity: 1;
         transform: scale(1) translateY(0);
     }
+}
+
+/* FEEDBACK QUIZ */
+
+.quiz label.correta,
+.quiz label.correta:has(input:checked) {
+    border-color: #3fb950;
+    background: rgba(63, 185, 80, 0.14);
+    color: #fff;
+}
+
+.quiz label.correta .option-letter {
+    border-color: #3fb950;
+    background: #3fb950;
+    color: #111;
+}
+
+.quiz label.errada,
+.quiz label.errada:has(input:checked) {
+    border-color: #f85149;
+    background: rgba(248, 81, 73, 0.14);
+    color: #fff;
+}
+
+.quiz label.errada .option-letter {
+    border-color: #f85149;
+    background: #f85149;
+    color: #fff;
+}
+
+.quiz fieldset.questao-certa {
+    border-color: rgba(63, 185, 80, 0.45);
+}
+
+.quiz fieldset.questao-errada {
+    border-color: rgba(248, 81, 73, 0.45);
 }
