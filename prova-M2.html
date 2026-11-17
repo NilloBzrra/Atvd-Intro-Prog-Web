@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de JavaScript | JS Mastery</title>
+    <link rel="stylesheet" href="formato.css">
+</head>
+<body>
+    <main class="quiz" data-quiz="m2">
+        <header class="quiz-header">
+            <span class="quiz-badge">Avaliação</span>
+            <h1>Estruturas de Controle</h1>
+            <p class="quiz-subtitle">Responda às 5 questões e confira seu desempenho.</p>
+            <div class="quiz-progress" aria-label="5 questões">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <form id="formQuiz">
+            <fieldset>
+                <legend>1. Qual estrutura executa um bloco somente quando uma condição é verdadeira?</legend>
+                <label><input type="radio" name="q1" value="a" required><span class="option-letter">A</span><span>if</span></label>
+                <label><input type="radio" name="q1" value="b"><span class="option-letter">B</span><span>for</span></label>
+                <label><input type="radio" name="q1" value="c"><span class="option-letter">C</span><span>while</span></label>
+                <label><input type="radio" name="q1" value="d"><span class="option-letter">D</span><span>function</span></label>
+                <label><input type="radio" name="q1" value="e"><span class="option-letter">E</span><span>return</span></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>2. Qual palavra-chave permite comparar vários valores de uma expressão?</legend>
+                <label><input type="radio" name="q2" value="a" required><span class="option-letter">A</span><span>switch</span></label>
+                <label><input type="radio" name="q2" value="b"><span class="option-letter">B</span><span>break</span></label>
+                <label><input type="radio" name="q2" value="c"><span class="option-letter">C</span><span>else</span></label>
+                <label><input type="radio" name="q2" value="d"><span class="option-letter">D</span><span>try</span></label>
+                <label><input type="radio" name="q2" value="e"><span class="option-letter">E</span><span>catch</span></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>3. Qual loop é mais adequado quando o número de repetições já é conhecido?</legend>
+                <label><input type="radio" name="q3" value="a" required><span class="option-letter">A</span><span>while</span></label>
+                <label><input type="radio" name="q3" value="b"><span class="option-letter">B</span><span>do while</span></label>
+                <label><input type="radio" name="q3" value="c"><span class="option-letter">C</span><span>for</span></label>
+                <label><input type="radio" name="q3" value="d"><span class="option-letter">D</span><span>if</span></label>
+                <label><input type="radio" name="q3" value="e"><span class="option-letter">E</span><span>switch</span></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>4. Qual instrução interrompe imediatamente a execução de um loop ou switch?</legend>
+                <label><input type="radio" name="q4" value="a" required><span class="option-letter">A</span><span>stop</span></label>
+                <label><input type="radio" name="q4" value="b"><span class="option-letter">B</span><span>exit</span></label>
+                <label><input type="radio" name="q4" value="c"><span class="option-letter">C</span><span>break</span></label>
+                <label><input type="radio" name="q4" value="d"><span class="option-letter">D</span><span>close</span></label>
+                <label><input type="radio" name="q4" value="e"><span class="option-letter">E</span><span>return</span></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>5. Qual palavra-chave é usada para executar outra opção após uma condição if falsa?</legend>
+                <label><input type="radio" name="q5" value="a" required><span class="option-letter">A</span><span>else</span></label>
+                <label><input type="radio" name="q5" value="b"><span class="option-letter">B</span><span>next</span></label>
+                <label><input type="radio" name="q5" value="c"><span class="option-letter">C</span><span>case</span></label>
+                <label><input type="radio" name="q5" value="d"><span class="option-letter">D</span><span>default</span></label>
+                <label><input type="radio" name="q5" value="e"><span class="option-letter">E</span><span>continue</span></label>
+            </fieldset>
+
+            <button type="submit">Enviar respostas</button>
+        </form>
+        <p id="resultado" class="quiz-result" aria-live="polite"></p>
+    </main>
+    <script src="provas.js"></script>
+</body>
+</html>
