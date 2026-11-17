@@ -8,22 +8,17 @@
 </head>
 <body>
     <header>
-
-         <div class="marca">
-
+        <div class="marca">
             <img
                 class="logo"
                 src="IMGS/java2.png"
                 alt="JavaScript Mastery Logo"
             >
-
-        <div class="texto-container">
-        <h1 class="titulo">JavaScript Mastery</h1>
-        <p class="subtitulo">A linguagem da web</p>
+            <div class="texto-container">
+                <h1 class="titulo">JavaScript Mastery</h1>
+                <p class="subtitulo">A linguagem da web</p>
+            </div>
         </div>
-    </div>
-
-        
     </header>
     
     <main>
@@ -47,13 +42,21 @@
                     <h3>Módulo 3</h3>
                     <span>Manipulação de DOM</span>
                 </a>
-
                 <a href="modulo4.html" class="btn-modulo">
-                    <img class="btn-img" src="IMGS/Code4.jpg" alt="Módulo 3">
+                    <img class="btn-img" src="IMGS/Code6.jpg" alt="Módulo 4">
                     <h3>Módulo 4</h3>
                     <span>Alguma coisa</span>
                 </a>
-
+                <a href="#" class="btn-modulo em-breve">
+                    <img class="btn-img" src="IMGS/manutencao.jpg" alt="Módulo 5">
+                    <h3>Módulo 5</h3>
+                    <span>Em Breve!</span>
+                </a>
+                <a href="#" class="btn-modulo em-breve">
+                    <img class="btn-img" src="IMGS/manutencao.jpg" alt="Módulo 6">
+                    <h3>Módulo 6</h3>
+                    <span>Em Breve!</span>
+                </a>
             </div>
         </section>
 
@@ -78,6 +81,16 @@
             </div>
         </section>
     </main>
+
+    <dialog id="modal-em-breve" class="modal-aviso">
+        <div class="modal-conteudo">
+            <span class="modal-badge">Em desenvolvimento</span>
+            <h3>Conteúdo em breve!</h3>
+            <p>Este módulo já está sendo preparado e logo estará disponível para você continuar sua jornada.</p>
+            <button id="fechar-modal" type="button">Entendi</button>
+        </div>
+    </dialog>
+
     <script src="forms.js"></script>
 </body>
 </html>

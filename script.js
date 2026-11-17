@@ -1,8 +1,6 @@
-
 function executarExemplo1() {
     alert("🚀 Sucesso! O arquivo script.js está vinculado e rodando corretamente.");
 }
-
 
 function executarExemplo2() {
     const container = document.getElementById("resultadoLoop");
@@ -27,3 +25,4 @@ function executarExemplo3() {
     caixa.style.fontWeight = "bold";
     caixa.style.textAlign = "center";
 }
+

@@ -1,5 +1,15 @@
-h1, h2, h3 { margin-top: 0; }
+:root {
+    --js-yellow: #ffe388;
+    --js-yellow-glow: rgba(255, 227, 136, 0.25);
+    --dark-bg: #1D1D1D;
+    --darker-bg: #121212;
+    --card-bg: #242424;
+    --text-light: #E0E0E0;
+    --text-dark: #111111;
+    --cor-floresta: #111111;
+}
 
+h1, h2, h3 { margin-top: 0; }
 
 .marca {
   display: flex;
@@ -13,13 +23,12 @@ header .logo {
 }
 
 .marca .texto-container {
-    display: flex;
+  display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 header .titulo h1 {
-   
   font-size: 3rem;
   text-align: center;
   font-weight: 800;
@@ -33,7 +42,6 @@ header .subtitulo {
   font-weight: 400;
   color: var(--cor-floresta);
 }
-
 
 header {
     background: linear-gradient(135deg, var(--js-yellow) 0%, #ffc13a 100%);
@@ -55,12 +63,10 @@ header h1 {
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
 }
 
-
-
 main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 3rem 1.5rem;
+    max-width: 1250px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
 }
 
 .hero {
@@ -81,9 +87,55 @@ main {
 }
 
 .modulos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
     gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 1rem 2rem 1.8rem 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 227, 136, 0.4) transparent;
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 6%,
+        black 94%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 6%,
+        black 94%,
+        transparent 100%
+    );
+}
+
+.modulos-grid::-webkit-scrollbar {
+    height: 4px;
+}
+
+.modulos-grid::-webkit-scrollbar-button {
+    display: none;
+}
+
+.modulos-grid::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-left: 35%;
+}
+
+.modulos-grid::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-right: 35%;
+}
+
+.modulos-grid::-webkit-scrollbar-thumb {
+    background: rgba(255, 227, 136, 0.35);
+    border-radius: 999px;
+}
+
+.modulos-grid::-webkit-scrollbar-thumb:hover {
+    background: var(--js-yellow);
 }
 
 .btn-modulo {
@@ -93,6 +145,8 @@ main {
     align-items: center;
     justify-content: flex-end; 
     aspect-ratio: 4 / 3; 
+    flex: 0 0 240px;
+    scroll-snap-align: start;
     border: 1px solid #333;
     border-radius: 12px;
     padding: 1.5rem;
@@ -349,13 +403,6 @@ main {
         border-radius: 16px;
     }
 }
-:root {
-    --js-yellow: #ffe388;
-    --dark-bg: #1D1D1D;
-    --darker-bg: #121212;
-    --text-light: #E0E0E0;
-    --text-dark: #111111;
-}
 
 body {
     font-family: system-ui, -apple-system, sans-serif;
@@ -387,12 +434,6 @@ nav a {
 nav a:hover, nav a.active {
     background-color: var(--js-yellow);
     color: var(--text-dark);
-}
-
-main {
-    max-width: 800px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
 }
 
 h2 {
@@ -451,4 +492,69 @@ button:active {
 
 .result-box.visible {
     display: block;
+}
+
+/* EM BREVE */
+.btn-modulo.em-breve {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.modal-aviso::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+}
+
+.modal-aviso {
+    border: 1px solid var(--js-yellow);
+    border-radius: 16px;
+    background: linear-gradient(145deg, #252525, var(--darker-bg));
+    color: var(--text-light);
+    padding: 2rem;
+    max-width: 400px;
+    width: calc(100% - 2rem);
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    animation: surgirModal 0.25s ease-out;
+}
+
+.modal-badge {
+    display: inline-block;
+    background: rgba(255, 227, 136, 0.15);
+    color: var(--js-yellow);
+    border: 1px solid rgba(255, 227, 136, 0.4);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+}
+
+.modal-conteudo h3 {
+    color: var(--js-yellow);
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+}
+
+.modal-conteudo p {
+    color: #bbb;
+    font-size: 1rem;
+    margin-bottom: 1.75rem;
+}
+
+.modal-conteudo button {
+    width: 100%;
+}
+
+@keyframes surgirModal {
+    from {
+        opacity: 0;
+        transform: scale(0.92) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
