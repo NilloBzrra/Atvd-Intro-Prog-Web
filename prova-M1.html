@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de JavaScript | JS Mastery</title>
+    <link rel="stylesheet" href="formato.css">
+</head>
+<body>
+    <main class="quiz" data-quiz="m1">
+        <header class="quiz-header">
+            <span class="quiz-badge">Avaliação</span>
+            <h1> Fundamentos JavaScript </h1>
+            <p class="quiz-subtitle">Responda às 5 questões e confira seu desempenho.</p>
+            <div class="quiz-progress" aria-label="5 questões">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <form id="formQuiz">
+            <fieldset>
+                <legend>1. Qual palavra-chave cria uma variável que não pode receber outro valor?</legend>
+                <label><input type="radio" name="q1" value="a" required><span class="option-letter">A</span><span>var</span></label>
+                <label><input type="radio" name="q1" value="b"><span class="option-letter">B</span><span>let</span></label>
+                <label><input type="radio" name="q1" value="c"><span class="option-letter">C</span><span>const</span></label>
+                <label><input type="radio" name="q1" value="d"><span class="option-letter">D</span><span>static</span></label>
+                <label><input type="radio" name="q1" value="e"><span class="option-letter">E</span><span>define</span></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>2. Qual método exibe uma mensagem em uma janela de alerta?</legend>
+                <label><input type="radio" name="q2" value="a" required><span class="option-letter">A</span><span>print()</span></label>
+                <label><input type="radio" name="q2" value="b"><span class="option-letter">B</span><span>message()</span></label>
+                <label><input type="radio" name="q2" value="c"><span class="option-letter">C</span><span>alert()</span></label>
+                <label><input type="radio" name="q2" value="d"><span class="option-letter">D</span><span>console()</span></label>
+                <label><input type="radio" name="q2" value="e"><span class="option-letter">E</span><span>show()</span></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>3. Qual é o operador usado para comparar valor e tipo?</legend>
+                <label><input type="radio" name="q3" value="a" required><span class="option-letter">A</span><span>=</span></label>
+                <label><input type="radio" name="q3" value="b"><span class="option-letter">B</span><span>==</span></label>
+                <label><input type="radio" name="q3" value="c"><span class="option-letter">C</span><span>!=</span></label>
+                <label><input type="radio" name="q3" value="d"><span class="option-letter">D</span><span>===</span></label>
+                <label><input type="radio" name="q3" value="e"><span class="option-letter">E</span><span>&lt;&gt;</span></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>4. Qual função converte o texto "10" em um número inteiro?</legend>
+                <label><input type="radio" name="q4" value="a" required><span class="option-letter">A</span><span>String("10")</span></label>
+                <label><input type="radio" name="q4" value="b"><span class="option-letter">B</span><span>parseInt("10")</span></label>
+                <label><input type="radio" name="q4" value="c"><span class="option-letter">C</span><span>toText("10")</span></label>
+                <label><input type="radio" name="q4" value="d"><span class="option-letter">D</span><span>Number("texto")</span></label>
+                <label><input type="radio" name="q4" value="e"><span class="option-letter">E</span><span>Boolean("10")</span></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>5. Qual estrutura repete um bloco enquanto uma condição for verdadeira?</legend>
+                <label><input type="radio" name="q5" value="a" required><span class="option-letter">A</span><span>if</span></label>
+                <label><input type="radio" name="q5" value="b"><span class="option-letter">B</span><span>switch</span></label>
+                <label><input type="radio" name="q5" value="c"><span class="option-letter">C</span><span>while</span></label>
+                <label><input type="radio" name="q5" value="d"><span class="option-letter">D</span><span>else</span></label>
+                <label><input type="radio" name="q5" value="e"><span class="option-letter">E</span><span>function</span></label>
+            </fieldset>
+
+            <button type="submit">Enviar respostas</button>
+        </form>
+        <p id="resultado" class="quiz-result" aria-live="polite"></p>
+    </main>
+    <script src="provas.js"></script>
+</body>
+</html>
