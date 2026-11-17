@@ -9,8 +9,9 @@
 <body>
     <main class="quiz" data-quiz="m1">
         <header class="quiz-header">
+            <a href="modulo1.html" class="btn-voltar">← Voltar ao módulo</a>
             <span class="quiz-badge">Avaliação</span>
-            <h1> Fundamentos JavaScript </h1>
+            <h1>Fundamentos JavaScript</h1>
             <p class="quiz-subtitle">Responda às 5 questões e confira seu desempenho.</p>
             <div class="quiz-progress" aria-label="5 questões">
                 <span></span>
@@ -69,7 +70,12 @@
 
             <button type="submit">Enviar respostas</button>
         </form>
+
         <p id="resultado" class="quiz-result" aria-live="polite"></p>
+
+        <div class="quiz-footer">
+            <a href="modulo1.html" class="btn-voltar-rodape">← Voltar para o Módulo 1</a>
+        </div>
     </main>
     <script src="provas.js"></script>
 </body>
