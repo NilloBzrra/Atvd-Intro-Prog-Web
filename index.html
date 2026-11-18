@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Mastery - Início</title>
-    <link rel="stylesheet" href="formato.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -24,7 +24,7 @@
     <main>
         <section class="hero">
             <h2>Bem-vindo ao Curso - JavaScript Mastery</h2>
-            <p>Aprenda JavaScript do zero ao avançado. Escolha um dos módulos abaixo para iniciar sua jornada de aprendizado ou cadastre-se para salvar seu progresso.</p>
+            <p class="hero-justify">Aprenda JavaScript do zero ao avançado de forma <strong>prática e direto ao ponto</strong>. Escolha um dos módulos abaixo para iniciar sua jornada de aprendizado ou cadastre-se agora mesmo para salvar o seu progresso, desbloquear <strong>conteúdos exclusivos</strong> e acompanhar a sua evolução linha por linha de código! ;)</p>
             
             <div class="modulos-grid">
                 <a href="modulo1.html" class="btn-modulo">
@@ -45,7 +45,7 @@
                 <a href="modulo4.html" class="btn-modulo">
                     <img class="btn-img" src="IMGS/Code6.jpg" alt="Módulo 4">
                     <h3>Módulo 4</h3>
-                    <span>Alguma coisa</span>
+                    <span>Funções, Parâmetros e Escopo</span>
                 </a>
                 <a href="#" class="btn-modulo em-breve">
                     <img class="btn-img" src="IMGS/manutencao.jpg" alt="Módulo 5">
@@ -82,12 +82,23 @@
         </section>
     </main>
 
+    
     <dialog id="modal-em-breve" class="modal-aviso">
         <div class="modal-conteudo">
             <span class="modal-badge">Em desenvolvimento</span>
             <h3>Conteúdo em breve!</h3>
             <p>Este módulo já está sendo preparado e logo estará disponível para você continuar sua jornada.</p>
             <button id="fechar-modal" type="button">Entendi</button>
+        </div>
+    </dialog>
+
+  
+    <dialog id="modalSucesso" class="modal-aviso">
+        <div class="modal-conteudo">
+            <span class="modal-badge">Sucesso!</span>
+            <h3 id="modalTitulo">Cadastro Realizado</h3>
+            <p id="modalMensagem">Bem-vindo(a)! Seu cadastro foi realizado com sucesso.</p>
+            <button type="button" onclick="window.location.href='modulo1.html'">Começar a Estudar</button>
         </div>
     </dialog>
 

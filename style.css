@@ -75,6 +75,11 @@ main {
     margin-bottom: 4rem;
 }
 
+.hero-justify {
+    text-align: justify;
+    margin-bottom: 4rem;
+}
+
 .hero h2 {
     font-size: 2.2rem;
     color: var(--js-yellow);
@@ -600,29 +605,6 @@ body {
     line-height: 1.6;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1.5rem;
-    background-color: var(--darker-bg);
-}
-
-nav a {
-    color: var(--js-yellow);
-    text-decoration: none;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border: 1px solid var(--js-yellow);
-    border-radius: 6px;
-    transition: all 0.2s ease-in-out;
-}
-
-nav a:hover, nav a.active {
-    background-color: var(--js-yellow);
-    color: var(--text-dark);
-}
-
 h2 {
     color: var(--js-yellow);
     border-bottom: 1px solid #333;
@@ -733,6 +715,20 @@ button:active {
 
 .modal-conteudo button {
     width: 100%;
+    background-color: var(--js-yellow);
+    color: var(--text-dark);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: transform 0.1s, filter 0.2s;
+}
+
+.modal-conteudo button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
 }
 
 @keyframes surgirModal {
@@ -783,9 +779,8 @@ button:active {
 }
 
 
-/* Botão de voltar no topo do Quiz */
 .quiz-header {
-    position: relative; /* Permite posicionar o botão no canto superior esquerdo */
+    position: relative; 
 }
 
 .btn-voltar {
@@ -813,7 +808,7 @@ button:active {
     transform: translateX(-2px);
 }
 
-/* Botão secundário no rodapé (abaixo do resultado) */
+
 .quiz-footer {
     padding: 0 2.25rem 2.25rem;
     text-align: center;
@@ -850,3 +845,64 @@ button:active {
         padding: 0 1rem 1.25rem;
     }
 }
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    background-color: var(--darker-bg);
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--js-yellow);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--js-yellow);
+    border-radius: 6px;
+    background-color: var(--darker-bg);
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+nav a .modulo-nome {
+    max-width: 0;
+    opacity: 0;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: max-width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+
+nav a:hover, 
+nav a.active {
+    background-color: var(--js-yellow);
+    color: var(--text-dark);
+    box-shadow: 0 4px 15px var(--js-yellow-glow);
+    transform: translateY(-2px);
+}
+
+
+nav a:hover .modulo-nome, 
+nav a.active .modulo-nome {
+    max-width: 350px; 
+    opacity: 1;
+}
+
+
+nav a:hover .modulo-num,
+nav a.hover .modulo-nome,
+nav a.active .modulo-num,
+nav a.active .modulo-nome {
+    color: var(--text-dark);
+}
+
+```

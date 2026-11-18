@@ -1,32 +1,144 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Mastery - Módulo 3</title>
-    <link rel="stylesheet" href="formato.css">
+    <title>JS Mastery - Módulo 4</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-
-         <div class="marca">
-
+        <div class="marca">
             <img
                 class="logo"
                 src="IMGS/java2.png"
                 alt="JavaScript Mastery Logo"
             >
-
-        <div class="texto-container">
-        <h1 class="titulo">JavaScript Mastery</h1>
-        <p class="subtitulo">A linguagem da web</p>
+            <div class="texto-container">
+                <h1 class="titulo">JavaScript Mastery</h1>
+                <p class="subtitulo">A linguagem da web</p>
+            </div>
         </div>
-    </div>
-   </header>
+    </header>
+    
     <nav>
         <a href="index.html">Início</a>
-        <a href="modulo1.html">Módulo 1: Fundamentos</a>
-        <a href="modulo2.html">Módulo 2: Fluxo</a>
-        <a href="modulo3.html">Módulo 3: DOM</a>
-        <a href="modulo4.html" class="active" >Módulo 4: Alguma coisa</a>
+        <a href="modulo1.html">
+            <span class="modulo-num">Módulo 1</span>
+            <span class="modulo-nome">: Fundamentos</span>
+        </a>
+        <a href="modulo2.html">
+            <span class="modulo-num">Módulo 2</span>
+            <span class="modulo-nome">: Fluxo</span>
+        </a>
+        <a href="modulo3.html">
+            <span class="modulo-num">Módulo 3</span>
+            <span class="modulo-nome">: DOM</span>
+        </a>
+        <a href="modulo4.html" class="active">
+            <span class="modulo-num">Módulo 4</span>
+            <span class="modulo-nome">: Funções, Parâmetros e Escopo</span>
+        </a>
     </nav>
+
+    <main>
+        <h2>Módulo 4: Funções, Parâmetros e Escopo</h2>
+        
+        <h3>4.1 Anatomia de uma Função: Parâmetros, Argumentos e Retorno</h3>
+        <p>Funções são blocos de código nomeados e reutilizáveis que recebem entradas, processam uma lógica e devolvem um resultado. Distinguimos dois conceitos essenciais na comunicação com funções:</p>
+        <ul>
+            <li><strong>Parâmetros:</strong> São as variáveis locais declaradas entre parênteses na definição da função. Podem receber valores padrão (<em>default parameters</em>) caso nenhum valor seja informado.</li>
+            <li><strong>Argumentos:</strong> São os valores reais enviados na hora em que invocamos a função.</li>
+            <li><strong>Instrução return:</strong> Encerra imediatamente a execução da função e devolve o resultado para quem a chamou. Sem <code>return</code>, a função retorna <code>undefined</code>.</li>
+        </ul>
+
+        <div class="code-block">
+            <code>
+                <span class="keyword">function</span> calcularDesconto(valor, percentual = <span class="number">10</span>) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">const</span> desconto = valor * (percentual / <span class="number">100</span>);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> valor - desconto;<br>
+                }<br><br>
+                <span class="keyword">const</span> precoFinal = calcularDesconto(<span class="number">200</span>, <span class="number">15</span>); <span class="string">// 200 e 15 são argumentos → 170</span><br>
+                <span class="keyword">const</span> precoPadrao = calcularDesconto(<span class="number">200</span>);    <span class="string">// Usa percentual = 10 → 180</span>
+            </code>
+        </div>
+
+        <h3>4.2 Function Expressions e Arrow Functions (=>)</h3>
+        <p>Além da declaração tradicional, podemos armazenar funções anônimas em constantes (<em>Function Expressions</em>) ou utilizar a sintaxe moderna de <em>Arrow Functions</em> (<code>=></code>). Quando o corpo da Arrow Function possui apenas uma expressão e não utiliza chaves <code>{}</code>, o retorno ocorre de forma implícita.</p>
+
+        <div class="code-block">
+            <code>
+                <span class="comment">// Arrow Function com bloco explícito</span><br>
+                <span class="keyword">const</span> saudar = (nome) => {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">`Bem-vindo(a), ${nome}!`</span>;<br>
+                };<br><br>
+                <span class="comment">// Arrow Function concisa com retorno implícito</span><br>
+                <span class="keyword">const</span> somar = (a, b) => a + b;<br>
+                <span class="keyword">const</span> quadrado = n => n * n;
+            </code>
+        </div>
+
+        <h3>4.3 Escopo Léxico: Global, de Função e de Bloco</h3>
+        <p>O escopo determina onde uma variável é visível e pode ser acessada no código. O JavaScript segue o modelo de escopo léxico (definido pela posição onde o código foi escrito):</p>
+        
+        <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; background-color: var(--darker-bg); border-radius: 8px; overflow: hidden; border: 1px solid #333;">
+            <thead>
+                <tr style="background-color: rgba(255, 227, 136, 0.1); color: var(--js-yellow); text-align: left;">
+                    <th style="padding: 1rem; border-bottom: 1px solid #333;">NÍVEL DE ESCOPO</th>
+                    <th style="padding: 1rem; border-bottom: 1px solid #333;">ONDE É CRIADO</th>
+                    <th style="padding: 1rem; border-bottom: 1px solid #333;">VISIBILIDADE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #222;">
+                    <td style="padding: 1rem; font-weight: 600;">Escopo Global</td>
+                    <td style="padding: 1rem; color: #bbb;">Fora de qualquer função ou bloco</td>
+                    <td style="padding: 1rem; color: #bbb;">Acessível em todo o arquivo.</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #222;">
+                    <td style="padding: 1rem; font-weight: 600;">Escopo de Função</td>
+                    <td style="padding: 1rem; color: #bbb;">Dentro do corpo de uma função.</td>
+                    <td style="padding: 1rem; color: #bbb;">Restrito ao interior da função.</td>
+                </tr>
+                <tr>
+                    <td style="padding: 1rem; font-weight: 600;">Escopo de Bloco</td>
+                    <td style="padding: 1rem; color: #bbb;">Dentro de <code>if</code>, <code>for</code>, <code>while</code> (com <code>let</code> e <code>const</code>).</td>
+                    <td style="padding: 1rem; color: #bbb;">Restrito ao par de chaves <code>{}</code>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>4.4 Hoisting (Içamento)</h3>
+        <p>Antes de executar o código linha por linha, o motor JavaScript registra as declarações na memória. Por isso, funções criadas com <code>function nome() {}</code> sofrem <em>hoisting</em> completo e podem ser chamadas antes mesmo da linha em que foram escritas. Já <em>Arrow Functions</em> armazenadas em <code>const</code> seguem as regras da constante e só podem ser invocadas após sua declaração.</p>
+
+        <div class="code-block">
+            <code>
+                iniciarSistema(); <span class="comment">// Funciona devido ao hoisting de Function Declaration</span><br><br>
+                <span class="keyword">function</span> iniciarSistema() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">const</span> mensagemInterna = <span class="string">"Sistema online"</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;console.log(mensagemInterna);<br>
+                }
+            </code>
+        </div>
+
+        <div class="code-block" style="border-left-color: var(--js-yellow); background-color: rgba(255, 227, 136, 0.05); margin-top: 2rem;">
+            <strong style="color: var(--js-yellow);">Dica do Professor — Separação de Responsabilidades</strong>
+            <p style="margin: 0.5rem 0 0 0; color: #bbb;">Evite colocar <code>console.log()</code> dentro de funções de cálculo. Prefira sempre devolver o resultado com <code>return</code> e exibir no console fora da função — assim você consegue reaproveitar esse valor em cálculos futuros ou na interface HTML.</p>
+        </div>
+
+        <h3>Na prática</h3>
+        <p>Clique nos botões abaixo para testar a execução de funções e Arrow Functions direto na tela:</p>
+        
+        <div id="caixaFuncoes" class="result-box visible">Aguardando execução da função...</div>
+        <br>
+        <button onclick="executarExemploFuncao()">Testar Função com Parâmetros</button> 
+        <button onclick="executarExemploArrow()">Testar Arrow Function</button> 
+        <button type="button" onclick="window.location.href='prova-M4.html'">Avaliação de Fixação</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

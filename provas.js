@@ -7,13 +7,16 @@ if (formQuiz) {
         const quiz = document.querySelector('.quiz');
         const prova = quiz ? quiz.dataset.quiz : 'm1';
 
+
         const respostasPorProva = {
             m1: { q1: 'c', q2: 'c', q3: 'd', q4: 'b', q5: 'c' },
             m2: { q1: 'a', q2: 'a', q3: 'c', q4: 'c', q5: 'a' },
-            m3: { q1: 'b', q2: 'b', q3: 'c', q4: 'a', q5: 'a' }
+            m3: { q1: 'b', q2: 'b', q3: 'c', q4: 'a', q5: 'a' },
+            m4: { q1: 'b', q2: 'd', q3: 'b', q4: 'c', q5: 'b', q6: 'b', q7: 'b', q8: 'b', q9: 'b', q10: 'b'}
         };
 
         const respostasCorretas = respostasPorProva[prova];
+        const totalQuestoes = Object.keys(respostasCorretas).length;
         let acertos = 0;
 
 
@@ -23,6 +26,7 @@ if (formQuiz) {
         formQuiz.querySelectorAll('fieldset').forEach((fs) => {
             fs.classList.remove('questao-certa', 'questao-errada');
         });
+
 
         for (const [questao, respostaCorreta] of Object.entries(respostasCorretas)) {
             const inputMarcado = formQuiz.querySelector(`input[name="${questao}"]:checked`);
@@ -45,8 +49,9 @@ if (formQuiz) {
             }
         }
 
+     
         const resultado = document.getElementById('resultado');
-        resultado.textContent = `Você acertou ${acertos} de 5 questões.`;
+        resultado.textContent = `Você acertou ${acertos} de ${totalQuestoes} questões.`;
         resultado.classList.add('visible');
     });
 }
