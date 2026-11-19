@@ -8,115 +8,70 @@
 </head>
 <body>
     <main class="quiz" data-quiz="m4">
-        <header class="quiz-header">
+        <div class="topo-quiz">
             <a href="modulo4.html" class="btn-voltar">← Voltar ao módulo</a>
-            <span class="quiz-badge">Avaliação</span>
+            <br>
+            <span class="etiqueta-quiz">Avaliação</span>
             <h1>Funções, Parâmetros e Escopo</h1>
-            <p class="quiz-subtitle">Responda às questões abaixo e confira seu desempenho.</p>
-            <div class="quiz-progress" aria-label="10 questões">
-                <span></span><span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span><span></span>
-            </div>
-        </header>
+            <p class="subtitulo-quiz">Responda às 5 questões e confira seu desempenho.</p>
+        </div>
 
         <form id="formQuiz">
             <fieldset>
-                <legend>1. Qual a diferença entre um parâmetro e um argumento em uma função?</legend>
-                <label><input type="radio" name="q1" value="a" required><span class="option-letter">A</span><span>Parâmetros são valores numéricos e argumentos são textos.</span></label>
-                <label><input type="radio" name="q1" value="b"><span class="option-letter">B</span><span>Parâmetro é a variável listada na definição da função; argumento é o valor real passado na chamada da função.</span></label>
-                <label><input type="radio" name="q1" value="c"><span class="option-letter">C</span><span>Argumento é usado apenas em Arrow Functions e parâmetro em funções tradicionais.</span></label>
-                <label><input type="radio" name="q1" value="d"><span class="option-letter">D</span><span>Parâmetros são obrigatórios e argumentos são sempre opcionais.</span></label>
-                <label><input type="radio" name="q1" value="e"><span class="option-letter">E</span><span>São sinônimos exatos sem nenhuma distinção técnica.</span></label>
+                <legend>1. Qual palavra-chave é usada para criar uma função tradicional em JavaScript?</legend>
+                <label><input type="radio" name="q1" value="a" required><span class="letra-opcao">A)</span> method</label>
+                <label><input type="radio" name="q1" value="b"><span class="letra-opcao">B)</span> function</label>
+                <label><input type="radio" name="q1" value="c"><span class="letra-opcao">C)</span> def</label>
+                <label><input type="radio" name="q1" value="d"><span class="letra-opcao">D)</span> create</label>
+                <label><input type="radio" name="q1" value="e"><span class="letra-opcao">E)</span> var</label>
             </fieldset>
 
             <fieldset>
-                <legend>2. O que uma função JavaScript retorna quando não possui uma instrução return explícita?</legend>
-                <label><input type="radio" name="q2" value="a" required><span class="option-letter">A</span><span>null</span></label>
-                <label><input type="radio" name="q2" value="b"><span class="option-letter">B</span><span>false</span></label>
-                <label><input type="radio" name="q2" value="c"><span class="option-letter">C</span><span>0</span></label>
-                <label><input type="radio" name="q2" value="d"><span class="option-letter">D</span><span>undefined</span></label>
-                <label><input type="radio" name="q2" value="e"><span class="option-letter">E</span><span>Uma string vazia ""</span></label>
+                <legend>2. Qual instrução encerra a função e devolve um resultado para quem a chamou?</legend>
+                <label><input type="radio" name="q2" value="a" required><span class="letra-opcao">A)</span> break</label>
+                <label><input type="radio" name="q2" value="b"><span class="letra-opcao">B)</span> send</label>
+                <label><input type="radio" name="q2" value="c"><span class="letra-opcao">C)</span> output</label>
+                <label><input type="radio" name="q2" value="d"><span class="letra-opcao">D)</span> return</label>
+                <label><input type="radio" name="q2" value="e"><span class="letra-opcao">E)</span> console.log</label>
             </fieldset>
 
             <fieldset>
-                <legend>3. Qual alternativa converte corretamente <code>function dobrar(n) { return n * 2; }</code> em uma Arrow Function com retorno implícito?</legend>
-                <label><input type="radio" name="q3" value="a" required><span class="option-letter">A</span><span>const dobrar = (n) => { n * 2 };</span></label>
-                <label><input type="radio" name="q3" value="b"><span class="option-letter">B</span><span>const dobrar = (n) => n * 2;</span></label>
-                <label><input type="radio" name="q3" value="c"><span class="option-letter">C</span><span>const dobrar => (n) { return n * 2 };</span></label>
-                <label><input type="radio" name="q3" value="d"><span class="option-letter">D</span><span>arrow dobrar(n) => n * 2;</span></label>
-                <label><input type="radio" name="q3" value="e"><span class="option-letter">E</span><span>const dobrar = function(n) => n * 2;</span></label>
+                <legend>3. Na função <code>function calcularDesconto(valor, percentual = 10)</code>, o que acontece se chamarmos <code>calcularDesconto(200)</code>?</legend>
+                <label><input type="radio" name="q3" value="a" required><span class="letra-opcao">A)</span> Ocorre um erro por falta de parâmetro.</label>
+                <label><input type="radio" name="q3" value="b"><span class="letra-opcao">B)</span> O percentual assume o valor 0.</label>
+                <label><input type="radio" name="q3" value="c"><span class="letra-opcao">C)</span> O percentual assume o valor padrão 10.</label>
+                <label><input type="radio" name="q3" value="d"><span class="letra-opcao">D)</span> A função retorna undefined.</label>
+                <label><input type="radio" name="q3" value="e"><span class="letra-opcao">E)</span> O valor 200 é ignorado.</label>
             </fieldset>
 
             <fieldset>
-                <legend>4. Na função <code>function saudar(nome = "Visitante") { return `Olá, ${nome}`; }</code>, o que ocorre ao chamar saudar() sem argumentos?</legend>
-                <label><input type="radio" name="q4" value="a" required><span class="option-letter">A</span><span>Retorna "Olá, undefined".</span></label>
-                <label><input type="radio" name="q4" value="b"><span class="option-letter">B</span><span>Lança um erro por falta de argumento obrigatório.</span></label>
-                <label><input type="radio" name="q4" value="c"><span class="option-letter">C</span><span>Retorna "Olá, Visitante", assumindo o valor padrão definido.</span></label>
-                <label><input type="radio" name="q4" value="d"><span class="option-letter">D</span><span>Retorna "Olá, null".</span></label>
-                <label><input type="radio" name="q4" value="e"><span class="option-letter">E</span><span>A função não é executada.</span></label>
+                <legend>4. Onde uma variável criada dentro de uma função pode ser acessada?</legend>
+                <label><input type="radio" name="q4" value="a" required><span class="letra-opcao">A)</span> Em qualquer arquivo do projeto.</label>
+                <label><input type="radio" name="q4" value="b"><span class="letra-opcao">B)</span> Apenas dentro da própria função (escopo local).</label>
+                <label><input type="radio" name="q4" value="c"><span class="letra-opcao">C)</span> Apenas fora da função.</label>
+                <label><input type="radio" name="q4" value="d"><span class="letra-opcao">D)</span> Somente no arquivo HTML.</label>
+                <label><input type="radio" name="q4" value="e"><span class="letra-opcao">E)</span> Em todas as funções da página.</label>
             </fieldset>
 
             <fieldset>
-                <legend>5. Sobre o Escopo de Função / Bloco, o que acontece se tentarmos acessar fora de uma função uma variável declarada com let dentro dela?</legend>
-                <label><input type="radio" name="q5" value="a" required><span class="option-letter">A</span><span>O valor é acessado normalmente no escopo global.</span></label>
-                <label><input type="radio" name="q5" value="b"><span class="option-letter">B</span><span>Ocorre um ReferenceError, pois variáveis let e const são restritas ao escopo onde foram criadas.</span></label>
-                <label><input type="radio" name="q5" value="c"><span class="option-letter">C</span><span>A variável retorna null fora da função.</span></label>
-                <label><input type="radio" name="q5" value="d"><span class="option-letter">D</span><span>O JavaScript move automaticamente a declaração para o topo do arquivo.</span></label>
-                <label><input type="radio" name="q5" value="e"><span class="option-letter">E</span><span>O valor é convertido em uma propriedade do objeto window.</span></label>
-            </fieldset>
-
-            <fieldset>
-                <legend>6. Como o Hoisting (içamento) se comporta em relação a uma Function Declaration (function minhaFuncao() {})?</legend>
-                <label><input type="radio" name="q6" value="a" required><span class="option-letter">A</span><span>Impede que a função seja chamada mais de uma vez no mesmo arquivo.</span></label>
-                <label><input type="radio" name="q6" value="b"><span class="option-letter">B</span><span>Permite que a função seja invocada em linhas anteriores à sua declaração no código.</span></label>
-                <label><input type="radio" name="q6" value="c"><span class="option-letter">C</span><span>Obriga que todas as funções sejam declaradas no final do arquivo.</span></label>
-                <label><input type="radio" name="q6" value="d"><span class="option-letter">D</span><span>Transforma automaticamente a função em uma Arrow Function.</span></label>
-                <label><input type="radio" name="q6" value="e"><span class="option-letter">E</span><span>Apaga as variáveis locais após a primeira execução.</span></label>
-            </fieldset>
-
-            <fieldset>
-                <legend>7. Qual a diferença prática entre usar <code>console.log(resultado)</code> e <code>return resultado</code> dentro de uma função?</legend>
-                <label><input type="radio" name="q7" value="a" required><span class="option-letter">A</span><span>console.log encerra a função, enquanto return apenas imprime na tela.</span></label>
-                <label><input type="radio" name="q7" value="b"><span class="option-letter">B</span><span>console.log apenas exibe o valor no console para depuração, enquanto return devolve o valor para ser armazenado ou reutilizado por quem chamou a função.</span></label>
-                <label><input type="radio" name="q7" value="c"><span class="option-letter">C</span><span>Ambos devolvem o valor para variáveis externas da mesma maneira.</span></label>
-                <label><input type="radio" name="q7" value="d"><span class="option-letter">D</span><span>return só funciona se houver um console.log na linha anterior.</span></label>
-                <label><input type="radio" name="q7" value="e"><span class="option-letter">E</span><span>console.log é mais rápido e substitui o return em produção.</span></label>
-            </fieldset>
-
-            <fieldset>
-                <legend>8. Qual função calcula e retorna corretamente a área de um retângulo dados largura e altura?</legend>
-                <label><input type="radio" name="q8" value="a" required><span class="option-letter">A</span><span>const area = (largura, altura) => largura + altura;</span></label>
-                <label><input type="radio" name="q8" value="b"><span class="option-letter">B</span><span>const area = (largura, altura) => largura * altura;</span></label>
-                <label><input type="radio" name="q8" value="c"><span class="option-letter">C</span><span>const area = (largura, altura) => { largura * altura };</span></label>
-                <label><input type="radio" name="q8" value="d"><span class="option-letter">D</span><span>function area(largura, altura) { console.log(largura * altura); }</span></label>
-                <label><input type="radio" name="q8" value="e"><span class="option-letter">E</span><span>const area = (largura, altura) => (largura * altura) / 2;</span></label>
-            </fieldset>
-
-            <fieldset>
-                <legend>9. O que acontece com qualquer linha de código escrita logo abaixo de uma instrução return (no mesmo bloco) dentro de uma função?</legend>
-                <label><input type="radio" name="q9" value="a" required><span class="option-letter">A</span><span>É executada normalmente antes de a função encerrar.</span></label>
-                <label><input type="radio" name="q9" value="b"><span class="option-letter">B</span><span>Nunca é executada (código inacessível), pois o return encerra imediatamente a execução da função.</span></label>
-                <label><input type="radio" name="q9" value="c"><span class="option-letter">C</span><span>É executada apenas se retornar um valor booleano.</span></label>
-                <label><input type="radio" name="q9" value="d"><span class="option-letter">D</span><span>Causa um erro fatal de sintaxe que impede o carregamento da página.</span></label>
-                <label><input type="radio" name="q9" value="e"><span class="option-letter">E</span><span>É executada de forma assíncrona após 1 segundo.</span></label>
-            </fieldset>
-
-            <fieldset>
-                <legend>10. O que são funções anônimas e onde são mais frequentemente utilizadas?</legend>
-                <label><input type="radio" name="q10" value="a" required><span class="option-letter">A</span><span>Funções secretas do navegador que não podem ser chamadas; usadas apenas em segurança.</span></label>
-                <label><input type="radio" name="q10" value="b"><span class="option-letter">B</span><span>Funções sem nome identificador, muito usadas como callbacks em métodos de array (.filter, .map) e eventos (addEventListener).</span></label>
-                <label><input type="radio" name="q10" value="c"><span class="option-letter">C</span><span>Funções que não aceitam nenhum parâmetro; usadas apenas em cálculos matemáticos.</span></label>
-                <label><input type="radio" name="q10" value="d"><span class="option-letter">D</span><span>Funções escritas sem a palavra-chave return; usadas apenas em laços while.</span></label>
-                <label><input type="radio" name="q10" value="e"><span class="option-letter">E</span><span>Funções declaradas fora do arquivo JavaScript principal.</span></label>
+                <legend>5. Qual alternativa representa corretamente uma Arrow Function que soma dois números?</legend>
+                <label><input type="radio" name="q5" value="a" required><span class="letra-opcao">A)</span> const somar = (a, b) => a + b;</label>
+                <label><input type="radio" name="q5" value="b"><span class="letra-opcao">B)</span> const somar = (a, b) -> a + b;</label>
+                <label><input type="radio" name="q5" value="c"><span class="letra-opcao">C)</span> arrow somar(a, b) = a + b;</label>
+                <label><input type="radio" name="q5" value="d"><span class="letra-opcao">D)</span> const somar => (a, b) { a + b };</label>
+                <label><input type="radio" name="q5" value="e"><span class="letra-opcao">E)</span> function => somar(a, b) { return a + b; }</label>
             </fieldset>
 
             <button type="submit">Enviar respostas</button>
         </form>
-        <p id="resultado" class="quiz-result" aria-live="polite"></p>
-        <div class="quiz-footer">
+
+        <p id="resultado" class="resultado-quiz"></p>
+
+        <div class="rodape-quiz">
             <a href="modulo4.html" class="btn-voltar-rodape">← Voltar para o Módulo 4</a>
         </div>
     </main>
+
     <script src="provas.js"></script>
 </body>
 </html>

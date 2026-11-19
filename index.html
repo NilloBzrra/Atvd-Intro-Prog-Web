@@ -9,96 +9,70 @@
 <body>
     <header>
         <div class="marca">
-            <img
-                class="logo"
-                src="IMGS/java2.png"
-                alt="JavaScript Mastery Logo"
-            >
-            <div class="texto-container">
-                <h1 class="titulo">JavaScript Mastery</h1>
+            <img class="logo" src="IMGS/java2.png" alt="JavaScript Mastery Logo">
+            <div>
+                <h1>JavaScript Mastery</h1>
                 <p class="subtitulo">A linguagem da web</p>
             </div>
         </div>
     </header>
     
     <main>
-        <section class="hero">
+        <section class="apresentacao">
             <h2>Bem-vindo ao Curso - JavaScript Mastery</h2>
-            <p class="hero-justify">Aprenda JavaScript do zero ao avançado de forma <strong>prática e direto ao ponto</strong>. Escolha um dos módulos abaixo para iniciar sua jornada de aprendizado ou cadastre-se agora mesmo para salvar o seu progresso, desbloquear <strong>conteúdos exclusivos</strong> e acompanhar a sua evolução linha por linha de código! ;)</p>
+            <p class="texto-justificado">Aprenda JavaScript do zero ao avançado de forma <strong>prática e direto ao ponto</strong>. Escolha um dos módulos abaixo para iniciar sua jornada de aprendizado ou cadastre-se agora mesmo para salvar o seu progresso, desbloquear <strong>conteúdos exclusivos</strong> e acompanhar a sua evolução linha por linha de código! ;)</p>
             
-            <div class="modulos-grid">
-                <a href="modulo1.html" class="btn-modulo">
-                    <img class="btn-img" src="IMGS/Code2.jpg" alt="Módulo 1">
+            <div class="lista-modulos">
+                <a href="modulo1.html" class="cartao-modulo">
+                    <img class="img-modulo" src="IMGS/Code2.jpg" alt="Módulo 1">
                     <h3>Módulo 1</h3>
                     <span>Fundamentos e Variáveis</span>
                 </a>
-                <a href="modulo2.html" class="btn-modulo">
-                    <img class="btn-img" src="IMGS/Code3.jpg" alt="Módulo 2">
+                <a href="modulo2.html" class="cartao-modulo">
+                    <img class="img-modulo" src="IMGS/Code3.jpg" alt="Módulo 2">
                     <h3>Módulo 2</h3>
                     <span>Estruturas de Controle</span>
                 </a>
-                <a href="modulo3.html" class="btn-modulo">
-                    <img class="btn-img" src="IMGS/Code4.jpg" alt="Módulo 3">
+                <a href="modulo3.html" class="cartao-modulo">
+                    <img class="img-modulo" src="IMGS/Code4.jpg" alt="Módulo 3">
                     <h3>Módulo 3</h3>
                     <span>Manipulação de DOM</span>
                 </a>
-                <a href="modulo4.html" class="btn-modulo">
-                    <img class="btn-img" src="IMGS/Code6.jpg" alt="Módulo 4">
+                <a href="modulo4.html" class="cartao-modulo">
+                    <img class="img-modulo" src="IMGS/Code6.jpg" alt="Módulo 4">
                     <h3>Módulo 4</h3>
                     <span>Funções, Parâmetros e Escopo</span>
-                </a>
-                <a href="#" class="btn-modulo em-breve">
-                    <img class="btn-img" src="IMGS/manutencao.jpg" alt="Módulo 5">
-                    <h3>Módulo 5</h3>
-                    <span>Em Breve!</span>
-                </a>
-                <a href="#" class="btn-modulo em-breve">
-                    <img class="btn-img" src="IMGS/manutencao.jpg" alt="Módulo 6">
-                    <h3>Módulo 6</h3>
-                    <span>Em Breve!</span>
                 </a>
             </div>
         </section>
 
-        <section class="cadastro-section">
-            <div class="form-container">
+        <section class="secao-cadastro">
+            <div class="caixa-form">
                 <h2>Crie sua conta</h2>
                 <form id="formCadastro">
-                    <div class="input-group">
+                    <div class="campo">
                         <label for="nome">Nome completo</label>
                         <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
                     </div>
-                    <div class="input-group">
+                    <div class="campo">
                         <label for="email">E-mail</label>
                         <input type="email" id="email" name="email" placeholder="seu@email.com" required>
                     </div>
-                    <div class="input-group">
+                    <div class="campo">
                         <label for="senha">Senha</label>
                         <input type="password" id="senha" name="senha" placeholder="Crie uma senha forte" required>
                     </div>
-                    <button type="submit" class="btn-submit">Realizar Cadastro</button>
+                    <button type="submit" class="btn-enviar">Realizar Cadastro</button>
                 </form>
             </div>
         </section>
     </main>
 
-    
-    <dialog id="modal-em-breve" class="modal-aviso">
-        <div class="modal-conteudo">
-            <span class="modal-badge">Em desenvolvimento</span>
-            <h3>Conteúdo em breve!</h3>
-            <p>Este módulo já está sendo preparado e logo estará disponível para você continuar sua jornada.</p>
-            <button id="fechar-modal" type="button">Entendi</button>
-        </div>
-    </dialog>
-
-  
-    <dialog id="modalSucesso" class="modal-aviso">
-        <div class="modal-conteudo">
-            <span class="modal-badge">Sucesso!</span>
-            <h3 id="modalTitulo">Cadastro Realizado</h3>
+    <dialog id="modalSucesso" class="aviso">
+        <div class="conteudo-aviso">
+            <span class="etiqueta-aviso">Sucesso!</span>
             <p id="modalMensagem">Bem-vindo(a)! Seu cadastro foi realizado com sucesso.</p>
-            <button type="button" onclick="window.location.href='modulo1.html'">Começar a Estudar</button>
+            <button id="btnComecar" type="button">Começar a Estudar</button>
         </div>
     </dialog>
 

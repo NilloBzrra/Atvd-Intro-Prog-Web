@@ -7,57 +7,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header>
-
-         <div class="marca">
-
-            <img
-                class="logo"
-                src="IMGS/java2.png"
-                alt="JavaScript Mastery Logo"
-            >
-
-        <div class="texto-container">
-        <h1 class="titulo">JavaScript Mastery</h1>
-        <p class="subtitulo">A linguagem da web</p>
+    <header>
+        <div class="marca">
+            <img class="logo" src="IMGS/java2.png" alt="JavaScript Mastery Logo">
+            <div>
+                <h1>JavaScript Mastery</h1>
+                <p class="subtitulo">A linguagem da web</p>
+            </div>
         </div>
-    </div>
-   </header>
-   <nav>
+    </header>
+
+    <nav>
         <a href="index.html">Início</a>
-        <a href="modulo1.html" class="active">
-            <span class="modulo-num">Módulo 1</span>
+        <a href="modulo1.html" class="ativo">
+            <span>Módulo 1</span>
             <span class="modulo-nome">: Fundamentos</span>
         </a>
         <a href="modulo2.html">
-            <span class="modulo-num">Módulo 2</span>
+            <span>Módulo 2</span>
             <span class="modulo-nome">: Fluxo</span>
         </a>
         <a href="modulo3.html">
-            <span class="modulo-num">Módulo 3</span>
+            <span>Módulo 3</span>
             <span class="modulo-nome">: DOM</span>
         </a>
         <a href="modulo4.html">
-            <span class="modulo-num">Módulo 4</span>
+            <span>Módulo 4</span>
             <span class="modulo-nome">: Funções, Parâmetros e Escopo</span>
         </a>
     </nav>
+
     <main>
         <h2>Módulo 1: Introdução e Variáveis</h2>
         <p>JavaScript permite que você crie conteúdo com atualização dinâmica. O primeiro passo é entender como armazenar informações na memória.</p>
         
-        <div class="code-block">
+        <div class="bloco-codigo">
             <code>
-                <span class="keyword">let</span> nome = <span class="string">"Desenvolvedor"</span>;<br>
-                <span class="keyword">const</span> versao = <span class="number">6</span>;<br>
-                <span class="keyword">var</span> obsoleto = <span class="boolean">true</span>;
+                <span class="palavra-chave">let</span> nome = <span class="texto">"Desenvolvedor"</span>;<br>
+                <span class="palavra-chave">const</span> versao = <span class="numero">6</span>;<br>
+                <span class="palavra-chave">var</span> obsoleto = <span class="booleano">true</span>;
             </code>
         </div>
 
         <h3>Na prática</h3>
         <p>Clique no botão abaixo para disparar seu primeiro alerta nativo utilizando a função <code>alert()</code> do JavaScript.</p>
-        <button onclick="executarExemplo1()">Executar Alerta</button> <button type="button" onclick="window.location.href='prova-M1.html'">Avaliação de Fixação</button>
+        <button onclick="executarExemplo1()">Executar Alerta</button>
+        <button type="button" onclick="window.location.href='prova-M1.html'">Avaliação de Fixação</button>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>

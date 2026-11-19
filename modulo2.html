@@ -8,57 +8,54 @@
 </head>
 <body>
     <header>
-
-         <div class="marca">
-
-            <img
-                class="logo"
-                src="IMGS/java2.png"
-                alt="JavaScript Mastery Logo"
-            >
-
-        <div class="texto-container">
-        <h1 class="titulo">JavaScript Mastery</h1>
-        <p class="subtitulo">A linguagem da web</p>
+        <div class="marca">
+            <img class="logo" src="IMGS/java2.png" alt="JavaScript Mastery Logo">
+            <div>
+                <h1>JavaScript Mastery</h1>
+                <p class="subtitulo">A linguagem da web</p>
+            </div>
         </div>
-    </div>
-   </header>
-   <nav>
+    </header>
+
+    <nav>
         <a href="index.html">Início</a>
         <a href="modulo1.html">
-            <span class="modulo-num">Módulo 1</span>
+            <span>Módulo 1</span>
             <span class="modulo-nome">: Fundamentos</span>
         </a>
-        <a href="modulo2.html" class="active">
-            <span class="modulo-num">Módulo 2</span>
+        <a href="modulo2.html" class="ativo">
+            <span>Módulo 2</span>
             <span class="modulo-nome">: Fluxo</span>
         </a>
         <a href="modulo3.html">
-            <span class="modulo-num">Módulo 3</span>
+            <span>Módulo 3</span>
             <span class="modulo-nome">: DOM</span>
         </a>
         <a href="modulo4.html">
-            <span class="modulo-num">Módulo 4</span>
+            <span>Módulo 4</span>
             <span class="modulo-nome">: Funções, Parâmetros e Escopo</span>
         </a>
     </nav>
+
     <main>
         <h2>Módulo 2: Estruturas de Controle</h2>
         <p>O fluxo de controle define a ordem em que as instruções são executadas usando condicionais e laços de repetição (loops).</p>
         
-        <div class="code-block">
+        <div class="bloco-codigo">
             <code>
-                <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i <= <span class="number">3</span>; i++) {<br>
-                &nbsp;&nbsp;console.log(<span class="string">"Iteração "</span> + i);<br>
+                <span class="palavra-chave">for</span> (<span class="palavra-chave">let</span> i = <span class="numero">1</span>; i <= <span class="numero">3</span>; i++) {<br>
+                &nbsp;&nbsp;console.log(<span class="texto">"Iteração "</span> + i);<br>
                 }
             </code>
         </div>
 
         <h3>Na prática</h3>
         <p>Teste a execução de um loop <code>for</code> renderizando dados dinamicamente na tela:</p>
-        <button onclick="executarExemplo2()">Rodar Loop</button> <button type="button" onclick="window.location.href='prova-M2.html'">Avaliação de Fixação</button>
-        <div id="resultadoLoop" class="result-box"></div> 
+        <button onclick="executarExemplo2()">Rodar Loop</button>
+        <button type="button" onclick="window.location.href='prova-M2.html'">Avaliação de Fixação</button>
+        <div id="resultadoLoop" class="caixa-resultado"></div> 
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>

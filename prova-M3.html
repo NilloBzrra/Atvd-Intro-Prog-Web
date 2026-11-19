@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -8,73 +8,70 @@
 </head>
 <body>
     <main class="quiz" data-quiz="m3">
-        <header class="quiz-header">
+        <div class="topo-quiz">
             <a href="modulo3.html" class="btn-voltar">← Voltar ao módulo</a>
-            <span class="quiz-badge">Avaliação</span>
+            <br>
+            <span class="etiqueta-quiz">Avaliação</span>
             <h1>Manipulação de DOM</h1>
-            <p class="quiz-subtitle">Responda às 5 questões e confira seu desempenho.</p>
-            <div class="quiz-progress" aria-label="5 questões">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </header>
+            <p class="subtitulo-quiz">Responda às 5 questões e confira seu desempenho.</p>
+        </div>
 
         <form id="formQuiz">
             <fieldset>
                 <legend>1. O que significa DOM em desenvolvimento web?</legend>
-                <label><input type="radio" name="q1" value="a" required><span class="option-letter">A</span><span>Data Object Model</span></label>
-                <label><input type="radio" name="q1" value="b"><span class="option-letter">B</span><span>Document Object Model</span></label>
-                <label><input type="radio" name="q1" value="c"><span class="option-letter">C</span><span>Dynamic Output Method</span></label>
-                <label><input type="radio" name="q1" value="d"><span class="option-letter">D</span><span>Digital Online Mode</span></label>
-                <label><input type="radio" name="q1" value="e"><span class="option-letter">E</span><span>Document Order Module</span></label>
+                <label><input type="radio" name="q1" value="a" required><span class="letra-opcao">A)</span> Data Object Model</label>
+                <label><input type="radio" name="q1" value="b"><span class="letra-opcao">B)</span> Document Object Model</label>
+                <label><input type="radio" name="q1" value="c"><span class="letra-opcao">C)</span> Dynamic Output Method</label>
+                <label><input type="radio" name="q1" value="d"><span class="letra-opcao">D)</span> Digital Online Mode</label>
+                <label><input type="radio" name="q1" value="e"><span class="letra-opcao">E)</span> Document Order Module</label>
             </fieldset>
 
             <fieldset>
                 <legend>2. Qual método seleciona um elemento pelo valor do atributo id?</legend>
-                <label><input type="radio" name="q2" value="a" required><span class="option-letter">A</span><span>querySelectorAll()</span></label>
-                <label><input type="radio" name="q2" value="b"><span class="option-letter">B</span><span>getElementById()</span></label>
-                <label><input type="radio" name="q2" value="c"><span class="option-letter">C</span><span>getElementsByTag()</span></label>
-                <label><input type="radio" name="q2" value="d"><span class="option-letter">D</span><span>createElement()</span></label>
-                <label><input type="radio" name="q2" value="e"><span class="option-letter">E</span><span>selectId()</span></label>
+                <label><input type="radio" name="q2" value="a" required><span class="letra-opcao">A)</span> querySelectorAll()</label>
+                <label><input type="radio" name="q2" value="b"><span class="letra-opcao">B)</span> getElementById()</label>
+                <label><input type="radio" name="q2" value="c"><span class="letra-opcao">C)</span> getElementsByTag()</label>
+                <label><input type="radio" name="q2" value="d"><span class="letra-opcao">D)</span> createElement()</label>
+                <label><input type="radio" name="q2" value="e"><span class="letra-opcao">E)</span> selectId()</label>
             </fieldset>
 
             <fieldset>
                 <legend>3. Qual propriedade altera somente o conteúdo textual de um elemento?</legend>
-                <label><input type="radio" name="q3" value="a" required><span class="option-letter">A</span><span>style</span></label>
-                <label><input type="radio" name="q3" value="b"><span class="option-letter">B</span><span>className</span></label>
-                <label><input type="radio" name="q3" value="c"><span class="option-letter">C</span><span>innerText</span></label>
-                <label><input type="radio" name="q3" value="d"><span class="option-letter">D</span><span>src</span></label>
-                <label><input type="radio" name="q3" value="e"><span class="option-letter">E</span><span>href</span></label>
+                <label><input type="radio" name="q3" value="a" required><span class="letra-opcao">A)</span> style</label>
+                <label><input type="radio" name="q3" value="b"><span class="letra-opcao">B)</span> className</label>
+                <label><input type="radio" name="q3" value="c"><span class="letra-opcao">C)</span> innerText</label>
+                <label><input type="radio" name="q3" value="d"><span class="letra-opcao">D)</span> src</label>
+                <label><input type="radio" name="q3" value="e"><span class="letra-opcao">E)</span> href</label>
             </fieldset>
 
             <fieldset>
                 <legend>4. Qual método adiciona um novo elemento à página?</legend>
-                <label><input type="radio" name="q4" value="a" required><span class="option-letter">A</span><span>createElement()</span></label>
-                <label><input type="radio" name="q4" value="b"><span class="option-letter">B</span><span>getElement()</span></label>
-                <label><input type="radio" name="q4" value="c"><span class="option-letter">C</span><span>findElement()</span></label>
-                <label><input type="radio" name="q4" value="d"><span class="option-letter">D</span><span>open()</span></label>
-                <label><input type="radio" name="q4" value="e"><span class="option-letter">E</span><span>write()</span></label>
+                <label><input type="radio" name="q4" value="a" required><span class="letra-opcao">A)</span> createElement()</label>
+                <label><input type="radio" name="q4" value="b"><span class="letra-opcao">B)</span> getElement()</label>
+                <label><input type="radio" name="q4" value="c"><span class="letra-opcao">C)</span> findElement()</label>
+                <label><input type="radio" name="q4" value="d"><span class="letra-opcao">D)</span> open()</label>
+                <label><input type="radio" name="q4" value="e"><span class="letra-opcao">E)</span> write()</label>
             </fieldset>
 
             <fieldset>
                 <legend>5. Qual método insere um elemento filho dentro de outro elemento?</legend>
-                <label><input type="radio" name="q5" value="a" required><span class="option-letter">A</span><span>appendChild()</span></label>
-                <label><input type="radio" name="q5" value="b"><span class="option-letter">B</span><span>remove()</span></label>
-                <label><input type="radio" name="q5" value="c"><span class="option-letter">C</span><span>replace()</span></label>
-                <label><input type="radio" name="q5" value="d"><span class="option-letter">D</span><span>clone()</span></label>
-                <label><input type="radio" name="q5" value="e"><span class="option-letter">E</span><span>select()</span></label>
+                <label><input type="radio" name="q5" value="a" required><span class="letra-opcao">A)</span> appendChild()</label>
+                <label><input type="radio" name="q5" value="b"><span class="letra-opcao">B)</span> remove()</label>
+                <label><input type="radio" name="q5" value="c"><span class="letra-opcao">C)</span> replace()</label>
+                <label><input type="radio" name="q5" value="d"><span class="letra-opcao">D)</span> clone()</label>
+                <label><input type="radio" name="q5" value="e"><span class="letra-opcao">E)</span> select()</label>
             </fieldset>
 
             <button type="submit">Enviar respostas</button>
         </form>
-        <p id="resultado" class="quiz-result" aria-live="polite"></p>
-        <div class="quiz-footer">
+
+        <p id="resultado" class="resultado-quiz"></p>
+
+        <div class="rodape-quiz">
             <a href="modulo3.html" class="btn-voltar-rodape">← Voltar para o Módulo 3</a>
         </div>
     </main>
+
     <script src="provas.js"></script>
 </body>
 </html>

@@ -1,77 +1,72 @@
+// Módulo 1: Alerta simples
 function executarExemplo1() {
-    alert("🚀 Sucesso! O arquivo script.js está vinculado e rodando corretamente.");
+    alert("Sucesso! O arquivo script.js está vinculado e rodando corretamente.");
 }
 
+// Módulo 2: Laço de repetição (for)
 function executarExemplo2() {
-    const container = document.getElementById("resultadoLoop");
-    container.classList.add("visible");
+    const caixa = document.getElementById("resultadoLoop");
+    caixa.classList.add("visivel");
 
-    container.innerHTML = "<strong>Iniciando processamento:</strong><br><br>";
-    
+    let texto = "<strong>Iniciando processamento:</strong><br><br>";
+
     for (let i = 1; i <= 5; i++) {
-        container.innerHTML += `Gerando item de lista número ${i}<br>`;
+        texto += "Gerando item número " + i + "<br>";
     }
-    
-    container.innerHTML += "<br><em>Loop processado com sucesso!</em>";
+
+    texto += "<br><em>Loop finalizado com sucesso!</em>";
+    caixa.innerHTML = texto;
 }
 
+// Módulo 3: Manipulação de estilo e texto no DOM
 function executarExemplo3() {
     const caixa = document.getElementById("caixaDOM");
-    
-    caixa.innerText = "DOM Manipulado com Sucesso! ✨";
-    caixa.style.backgroundColor = "#F7DF1E";
-    caixa.style.color = "#1D1D1D";
+
+    caixa.innerText = "DOM Manipulado com Sucesso!";
+    caixa.style.backgroundColor = "#ffe388";
+    caixa.style.color = "#111111";
     caixa.style.borderStyle = "solid";
     caixa.style.fontWeight = "bold";
     caixa.style.textAlign = "center";
 }
 
+// Módulo 4 (Parte 1): Função com parâmetros e return
+function calcularDesconto(valor, percentual = 10) {
+    const desconto = valor * (percentual / 100);
+    return valor - desconto;
+}
 
 function executarExemploFuncao() {
     const caixa = document.getElementById("caixaFuncoes");
-    caixa.classList.add("visible");
+    caixa.classList.add("visivel");
 
-    function calcularDesconto(valor, percentual = 10) {
-        const desconto = valor * (percentual / 100);
-        return valor - desconto;
-    }
+    const precoComDesconto = calcularDesconto(200, 15);
+    const precoPadrao = calcularDesconto(200);
 
-    const precoOriginal = 200;
-    const precoComDesconto = calcularDesconto(precoOriginal, 15); 
-    const precoPadrao = calcularDesconto(precoOriginal);         
+    caixa.innerHTML =
+        "<strong>Função Executada!</strong><br><br>" +
+        "Preço original: R$ 200,00<br>" +
+        "Com 15% de desconto: <strong>R$ " + precoComDesconto + ",00</strong><br>" +
+        "Com desconto padrão (10%): <strong>R$ " + precoPadrao + ",00</strong>";
 
-    caixa.innerHTML = `
-        <strong>Função com Parâmetros e Retorno Executada!</strong><br><br>
-        • Preço Original: R$ ${precoOriginal},00<br>
-        • Com 15% de desconto (argumentos 200 e 15): <strong>R$ ${precoComDesconto},00</strong><br>
-        • Com desconto padrão (argumento 200, default 10%): <strong>R$ ${precoPadrao},00</strong>
-    `;
-    
-    caixa.style.backgroundColor = "#242424";
     caixa.style.borderStyle = "solid";
-    caixa.style.borderColor = "var(--js-yellow)";
-    caixa.style.color = "var(--text-light)";
 }
+
+// Módulo 4 (Parte 2): Arrow Functions
+const saudar = (nome) => "Bem-vindo(a), " + nome + "!";
+const somar = (a, b) => a + b;
 
 function executarExemploArrow() {
     const caixa = document.getElementById("caixaFuncoes");
-    caixa.classList.add("visible");
+    caixa.classList.add("visivel");
 
-    // Arrow Functions
-    const saudar = (nome) => `Bem-vindo(a), ${nome}!`;
-    const somar = (a, b) => a + b;
-
-    const mensagem = saudar("Estudante do JS Mastery");
+    const mensagem = saudar("Estudante");
     const resultadoSoma = somar(10, 25);
 
-    caixa.innerHTML = `
-        <strong>Arrow Functions Executadas com Sucesso! ⚡</strong><br><br>
-        • Saudação (Arrow Function): <em>"${mensagem}"</em><br>
-        • Soma (Arrow Function concisa ` + "`10 + 25`" + `): <strong>${resultadoSoma}</strong>
-    `;
-    
-    caixa.style.backgroundColor = "#242424";
+    caixa.innerHTML =
+        "<strong>Arrow Functions Executadas!</strong><br><br>" +
+        "Saudação: <em>" + mensagem + "</em><br>" +
+        "Soma (10 + 25): <strong>" + resultadoSoma + "</strong>";
+
     caixa.style.borderStyle = "solid";
-    caixa.style.borderColor = "var(--js-yellow)";
-    caixa.style.color = "var(--text-light)";
 }

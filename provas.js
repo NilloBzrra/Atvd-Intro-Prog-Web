@@ -1,57 +1,46 @@
 const formQuiz = document.getElementById('formQuiz');
 
+const gabaritos = {
+    m1: ['c', 'c', 'd', 'b', 'c'],
+    m2: ['a', 'a', 'c', 'c', 'a'],
+    m3: ['b', 'b', 'c', 'a', 'a'],
+    m4: ['b', 'd', 'c', 'b', 'a']
+};
+
 if (formQuiz) {
-    formQuiz.addEventListener('submit', function(event) {
-        event.preventDefault();
+    formQuiz.addEventListener('submit', function(evento) {
+        evento.preventDefault();
 
-        const quiz = document.querySelector('.quiz');
-        const prova = quiz ? quiz.dataset.quiz : 'm1';
-
-
-        const respostasPorProva = {
-            m1: { q1: 'c', q2: 'c', q3: 'd', q4: 'b', q5: 'c' },
-            m2: { q1: 'a', q2: 'a', q3: 'c', q4: 'c', q5: 'a' },
-            m3: { q1: 'b', q2: 'b', q3: 'c', q4: 'a', q5: 'a' },
-            m4: { q1: 'b', q2: 'd', q3: 'b', q4: 'c', q5: 'b', q6: 'b', q7: 'b', q8: 'b', q9: 'b', q10: 'b'}
-        };
-
-        const respostasCorretas = respostasPorProva[prova];
-        const totalQuestoes = Object.keys(respostasCorretas).length;
+        const provaAtual = document.querySelector('.quiz').dataset.quiz;
+        const respostas = gabaritos[provaAtual];
         let acertos = 0;
 
+        // Limpa as marcações
+        const opcoes = formQuiz.querySelectorAll('label');
+        for (let i = 0; i < opcoes.length; i++) {
+            opcoes[i].classList.remove('correta', 'errada');
+        }
 
-        formQuiz.querySelectorAll('label').forEach((label) => {
-            label.classList.remove('correta', 'errada');
-        });
-        formQuiz.querySelectorAll('fieldset').forEach((fs) => {
-            fs.classList.remove('questao-certa', 'questao-errada');
-        });
+        // Corretor das questões
+        for (let i = 0; i < respostas.length; i++) {
+            const numeroQuestao = 'q' + (i + 1);
+            const letraCerta = respostas[i];
 
+            const marcada = formQuiz.querySelector('input[name="' + numeroQuestao + '"]:checked');
+            const correta = formQuiz.querySelector('input[name="' + numeroQuestao + '"][value="' + letraCerta + '"]');
 
-        for (const [questao, respostaCorreta] of Object.entries(respostasCorretas)) {
-            const inputMarcado = formQuiz.querySelector(`input[name="${questao}"]:checked`);
-            const inputCorreto = formQuiz.querySelector(`input[name="${questao}"][value="${respostaCorreta}"]`);
-            const fieldset = inputCorreto ? inputCorreto.closest('fieldset') : null;
+            correta.parentElement.classList.add('correta');
 
-            if (inputCorreto) {
-                inputCorreto.closest('label').classList.add('correta');
-            }
-
-            if (inputMarcado && inputMarcado.value === respostaCorreta) {
+            if (marcada.value === letraCerta) {
                 acertos++;
-                if (fieldset) fieldset.classList.add('questao-certa');
             } else {
-                if (fieldset) fieldset.classList.add('questao-errada');
-
-                if (inputMarcado) {
-                    inputMarcado.closest('label').classList.add('errada');
-                }
+                marcada.parentElement.classList.add('errada');
             }
         }
 
-     
+        // Pontuação final
         const resultado = document.getElementById('resultado');
-        resultado.textContent = `Você acertou ${acertos} de ${totalQuestoes} questões.`;
-        resultado.classList.add('visible');
+        resultado.textContent = 'Você acertou ' + acertos + ' de ' + respostas.length + ' questões.';
+        resultado.classList.add('visivel');
     });
 }

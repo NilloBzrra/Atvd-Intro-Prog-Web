@@ -1,57 +1,31 @@
 const formCadastro = document.getElementById('formCadastro');
+const modalSucesso = document.getElementById('modalSucesso');
+const btnComecar = document.getElementById('btnComecar');
 
 if (formCadastro) {
-    formCadastro.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-    
-        const nome = document.getElementById('nome').value;
-   
-        const modalSucesso = document.getElementById('modalSucesso');
-        const modalMensagem = document.getElementById('modalMensagem');
-        
-        if (modalSucesso && modalMensagem) {
-           
-            modalMensagem.innerHTML = `Bem-vindo(a), <strong>${nome}</strong>! Seu cadastro foi realizado com sucesso. Prepare-se para dominar o JavaScript.`;
-          
-            modalSucesso.showModal();
-        }
+    formCadastro.addEventListener('submit', function(evento) {
+        evento.preventDefault();
 
-    
+        const nome = document.getElementById('nome').value;
+        const modalMensagem = document.getElementById('modalMensagem');
+
+        modalMensagem.innerHTML = 'Bem-vindo(a), <strong>' + nome + '</strong>! Seu cadastro foi realizado com sucesso.';
+        modalSucesso.showModal();
+
         formCadastro.reset();
     });
 }
 
-
-const modalSucesso = document.getElementById('modalSucesso');
-if (modalSucesso) {
-    modalSucesso.addEventListener('click', (event) => {
-        if (event.target === modalSucesso) {
-            modalSucesso.close();
-        }
+if (btnComecar) {
+    btnComecar.addEventListener('click', function() {
+        window.location.href = 'modulo1.html';
     });
 }
 
-
-const modalEmBreve = document.getElementById('modal-em-breve');
-const btnFechar = document.getElementById('fechar-modal');
-const modulosEmBreve = document.querySelectorAll('.btn-modulo.em-breve');
-
-if (modalEmBreve && btnFechar) {
-    modulosEmBreve.forEach((modulo) => {
-        modulo.addEventListener('click', (event) => {
-            event.preventDefault();
-            modalEmBreve.showModal();
-        });
-    });
-
-    btnFechar.addEventListener('click', () => {
-        modalEmBreve.close();
-    });
-
-    modalEmBreve.addEventListener('click', (event) => {
-        if (event.target === modalEmBreve) {
-            modalEmBreve.close();
+if (modalSucesso) {
+    modalSucesso.addEventListener('click', function(evento) {
+        if (evento.target === modalSucesso) {
+            modalSucesso.close();
         }
     });
 }
