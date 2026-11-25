@@ -28,7 +28,7 @@ main {
     padding: 0 20px;
 }
 
-h2 {
+h2, h3 {
     color: var(--amarelo);
     border-bottom: 1px solid var(--borda);
     padding-bottom: 8px;
