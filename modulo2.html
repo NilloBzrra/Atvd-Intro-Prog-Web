@@ -38,22 +38,58 @@
     </nav>
 
     <main>
-        <h2>Módulo 2: Estruturas de Controle</h2>
-        <p>O fluxo de controle define a ordem em que as instruções são executadas usando condicionais e laços de repetição (loops).</p>
-        
+        <h2>Módulo 2: Estruturas de Controle e Fluxo</h2>
+        <p>Por padrão, o JavaScript lê o código de cima para baixo, linha por linha. As estruturas de controle permitem tomar decisões e repetir tarefas conforme a necessidade do programa.</p>
+
+        <h3>1. Estruturas Condicionais (<code>if</code>, <code>switch</code> e Ternário)</h3>
+        <ul>
+            <li><strong><code>if</code> / <code>else</code></strong>: executa um bloco de código apenas quando uma condição é verdadeira.</li>
+            <li><strong>Operador Lógico E (<code>&amp;&amp;</code>)</strong>: combina duas condições e só retorna <code>true</code> se <strong>ambas</strong> forem verdadeiras.</li>
+            <li><strong>Operador Condicional Ternário</strong>: atalho em uma única linha no formato <code>condicao ? valorSeVerdadeiro : valorSeFalso</code>.</li>
+            <li><strong><code>switch</code> e <code>default</code></strong>: ideal para comparar uma expressão com vários casos (<code>case</code>) exatos. Se nenhum caso bater, o bloco <code>default</code> é executado.</li>
+        </ul>
+
         <div class="bloco-codigo">
             <code>
-                <span class="palavra-chave">for</span> (<span class="palavra-chave">let</span> i = <span class="numero">1</span>; i <= <span class="numero">3</span>; i++) {<br>
-                &nbsp;&nbsp;console.log(<span class="texto">"Iteração "</span> + i);<br>
+                <span class="palavra-chave">const</span> idade = <span class="numero">20</span>, temCarteira = <span class="booleano">true</span>;<br>
+                <span class="palavra-chave">if</span> (idade >= <span class="numero">18</span> &amp;&amp; temCarteira) {<br>
+                &nbsp;&nbsp;console.log(<span class="texto">"Pode dirigir"</span>);<br>
+                }<br><br>
+                <span class="palavra-chave">const</span> status = idade >= <span class="numero">18</span> ? <span class="texto">"Adulto"</span> : <span class="texto">"Menor"</span>;<br><br>
+                <span class="palavra-chave">switch</span> (status) {<br>
+                &nbsp;&nbsp;<span class="palavra-chave">case</span> <span class="texto">"Adulto"</span>: console.log(<span class="texto">"Acesso liberado"</span>); <span class="palavra-chave">break</span>;<br>
+                &nbsp;&nbsp;<span class="palavra-chave">default</span>: console.log(<span class="texto">"Acesso restrito"</span>);<br>
+                }
+            </code>
+        </div>
+
+        <h3>2. Laços de Repetição (<code>for</code>, <code>while</code>, <code>do...while</code> e <code>for...of</code>)</h3>
+        <ul>
+            <li><strong><code>for</code></strong>: ideal quando você já sabe exatamente quantas vezes o bloco deve se repetir.</li>
+            <li><strong><code>while</code></strong>: repete enquanto a condição for verdadeira, testando antes de cada execução.</li>
+            <li><strong><code>do...while</code></strong>: executa o bloco <strong>pelo menos uma vez</strong> antes de verificar a condição.</li>
+            <li><strong><code>for...of</code></strong>: percorre diretamente cada valor de um objeto iterável, como um Array, sem precisar controlar índices manualmente.</li>
+        </ul>
+
+        <h3>3. Controlando o Laço (<code>break</code> e <code>continue</code>)</h3>
+        <p>Dentro de um loop, você pode alterar o fluxo a qualquer momento:</p>
+        <ul>
+            <li><strong><code>break</code></strong>: encerra imediatamente todo o laço de repetição (ou um bloco <code>switch</code>).</li>
+            <li><strong><code>continue</code></strong>: pula apenas a iteração atual e avança direto para a próxima volta do loop.</li>
+        </ul>
+
+        <div class="bloco-codigo">
+            <code>
+                <span class="palavra-chave">const</span> notas = [<span class="numero">8</span>, <span class="numero">5</span>, <span class="numero">10</span>];<br>
+                <span class="palavra-chave">for</span> (<span class="palavra-chave">const</span> nota <span class="palavra-chave">of</span> notas) {<br>
+                &nbsp;&nbsp;<span class="palavra-chave">if</span> (nota === <span class="numero">5</span>) <span class="palavra-chave">continue</span>; <span class="comentario">// Pula o 5 e segue o loop</span><br>
+                &nbsp;&nbsp;console.log(<span class="texto">"Nota:"</span>, nota);<br>
                 }
             </code>
         </div>
 
         <h3>Na prática</h3>
-        <p>Teste a execução de um loop <code>for</code> renderizando dados dinamicamente na tela:</p>
-        <button onclick="executarExemplo2()">Rodar Loop</button>
         <button type="button" onclick="window.location.href='prova-M2.html'">Avaliação de Fixação</button>
-        <div id="resultadoLoop" class="caixa-resultado"></div> 
     </main>
 
     <script src="script.js"></script>

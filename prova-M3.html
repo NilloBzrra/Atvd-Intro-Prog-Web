@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -13,53 +13,98 @@
             <br>
             <span class="etiqueta-quiz">Avaliação</span>
             <h1>Manipulação de DOM</h1>
-            <p class="subtitulo-quiz">Responda às 5 questões e confira seu desempenho.</p>
+            <p class="subtitulo-quiz">Responda às 10 questões e confira seu desempenho.</p>
         </div>
 
         <form id="formQuiz">
             <fieldset>
-                <legend>1. O que significa DOM em desenvolvimento web?</legend>
+                <legend>1. O que significa a sigla DOM no desenvolvimento web?</legend>
                 <label><input type="radio" name="q1" value="a" required><span class="letra-opcao">A)</span> Data Object Model</label>
                 <label><input type="radio" name="q1" value="b"><span class="letra-opcao">B)</span> Document Object Model</label>
                 <label><input type="radio" name="q1" value="c"><span class="letra-opcao">C)</span> Dynamic Output Method</label>
-                <label><input type="radio" name="q1" value="d"><span class="letra-opcao">D)</span> Digital Online Mode</label>
-                <label><input type="radio" name="q1" value="e"><span class="letra-opcao">E)</span> Document Order Module</label>
+                <label><input type="radio" name="q1" value="d"><span class="letra-opcao">D)</span> Digital Object Management</label>
+                <label><input type="radio" name="q1" value="e"><span class="letra-opcao">E)</span> Document Order Mechanism</label>
             </fieldset>
 
             <fieldset>
-                <legend>2. Qual método seleciona um elemento pelo valor do atributo id?</legend>
-                <label><input type="radio" name="q2" value="a" required><span class="letra-opcao">A)</span> querySelectorAll()</label>
-                <label><input type="radio" name="q2" value="b"><span class="letra-opcao">B)</span> getElementById()</label>
-                <label><input type="radio" name="q2" value="c"><span class="letra-opcao">C)</span> getElementsByTag()</label>
-                <label><input type="radio" name="q2" value="d"><span class="letra-opcao">D)</span> createElement()</label>
-                <label><input type="radio" name="q2" value="e"><span class="letra-opcao">E)</span> selectId()</label>
+                <legend>2. Qual método seleciona um elemento HTML pelo valor exato do seu atributo <code>id</code>?</legend>
+                <label><input type="radio" name="q2" value="a" required><span class="letra-opcao">A)</span> document.querySelectorAll()</label>
+                <label><input type="radio" name="q2" value="b"><span class="letra-opcao">B)</span> document.getElementById()</label>
+                <label><input type="radio" name="q2" value="c"><span class="letra-opcao">C)</span> document.getElementsByClassName()</label>
+                <label><input type="radio" name="q2" value="d"><span class="letra-opcao">D)</span> document.createElement()</label>
+                <label><input type="radio" name="q2" value="e"><span class="letra-opcao">E)</span> document.selectById()</label>
             </fieldset>
 
             <fieldset>
-                <legend>3. Qual propriedade altera somente o conteúdo textual de um elemento?</legend>
-                <label><input type="radio" name="q3" value="a" required><span class="letra-opcao">A)</span> style</label>
-                <label><input type="radio" name="q3" value="b"><span class="letra-opcao">B)</span> className</label>
-                <label><input type="radio" name="q3" value="c"><span class="letra-opcao">C)</span> innerText</label>
-                <label><input type="radio" name="q3" value="d"><span class="letra-opcao">D)</span> src</label>
-                <label><input type="radio" name="q3" value="e"><span class="letra-opcao">E)</span> href</label>
+                <legend>3. Qual método retorna o primeiro elemento que corresponde a um seletor CSS?</legend>
+                <label><input type="radio" name="q3" value="a" required><span class="letra-opcao">A)</span> document.querySelector()</label>
+                <label><input type="radio" name="q3" value="b"><span class="letra-opcao">B)</span> document.querySelectorAll()</label>
+                <label><input type="radio" name="q3" value="c"><span class="letra-opcao">C)</span> document.getElementsByTagName()</label>
+                <label><input type="radio" name="q3" value="d"><span class="letra-opcao">D)</span> document.findSelector()</label>
+                <label><input type="radio" name="q3" value="e"><span class="letra-opcao">E)</span> document.getCSS()</label>
             </fieldset>
 
             <fieldset>
-                <legend>4. Qual método adiciona um novo elemento à página?</legend>
-                <label><input type="radio" name="q4" value="a" required><span class="letra-opcao">A)</span> createElement()</label>
-                <label><input type="radio" name="q4" value="b"><span class="letra-opcao">B)</span> getElement()</label>
-                <label><input type="radio" name="q4" value="c"><span class="letra-opcao">C)</span> findElement()</label>
-                <label><input type="radio" name="q4" value="d"><span class="letra-opcao">D)</span> open()</label>
-                <label><input type="radio" name="q4" value="e"><span class="letra-opcao">E)</span> write()</label>
+                <legend>4. Qual propriedade altera apenas o texto de um elemento sem interpretar tags HTML (ajudando a evitar XSS)?</legend>
+                <label><input type="radio" name="q4" value="a" required><span class="letra-opcao">A)</span> innerHTML</label>
+                <label><input type="radio" name="q4" value="b"><span class="letra-opcao">B)</span> outerHTML</label>
+                <label><input type="radio" name="q4" value="c"><span class="letra-opcao">C)</span> textContent</label>
+                <label><input type="radio" name="q4" value="d"><span class="letra-opcao">D)</span> className</label>
+                <label><input type="radio" name="q4" value="e"><span class="letra-opcao">E)</span> value</label>
             </fieldset>
 
             <fieldset>
-                <legend>5. Qual método insere um elemento filho dentro de outro elemento?</legend>
-                <label><input type="radio" name="q5" value="a" required><span class="letra-opcao">A)</span> appendChild()</label>
-                <label><input type="radio" name="q5" value="b"><span class="letra-opcao">B)</span> remove()</label>
-                <label><input type="radio" name="q5" value="c"><span class="letra-opcao">C)</span> replace()</label>
-                <label><input type="radio" name="q5" value="d"><span class="letra-opcao">D)</span> clone()</label>
-                <label><input type="radio" name="q5" value="e"><span class="letra-opcao">E)</span> select()</label>
+                <legend>5. Qual método cria um novo nó de elemento HTML em memória antes de inseri-lo na página?</legend>
+                <label><input type="radio" name="q5" value="a" required><span class="letra-opcao">A)</span> document.createElement()</label>
+                <label><input type="radio" name="q5" value="b"><span class="letra-opcao">B)</span> document.appendChild()</label>
+                <label><input type="radio" name="q5" value="c"><span class="letra-opcao">C)</span> document.newNode()</label>
+                <label><input type="radio" name="q5" value="d"><span class="letra-opcao">D)</span> document.buildTag()</label>
+                <label><input type="radio" name="q5" value="e"><span class="letra-opcao">E)</span> document.insertHTML()</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>6. Qual método anexa um nó filho ao final da lista de filhos de um elemento pai?</legend>
+                <label><input type="radio" name="q6" value="a" required><span class="letra-opcao">A)</span> appendChild()</label>
+                <label><input type="radio" name="q6" value="b"><span class="letra-opcao">B)</span> removeChild()</label>
+                <label><input type="radio" name="q6" value="c"><span class="letra-opcao">C)</span> cloneNode()</label>
+                <label><input type="radio" name="q6" value="d"><span class="letra-opcao">D)</span> setAttribute()</label>
+                <label><input type="radio" name="q6" value="e"><span class="letra-opcao">E)</span> replaceWith()</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>7. Qual método registra um ouvinte de evento (como <code>"click"</code>) em um elemento do DOM?</legend>
+                <label><input type="radio" name="q7" value="a" required><span class="letra-opcao">A)</span> onEvent()</label>
+                <label><input type="radio" name="q7" value="b"><span class="letra-opcao">B)</span> attachClick()</label>
+                <label><input type="radio" name="q7" value="c"><span class="letra-opcao">C)</span> listenEvent()</label>
+                <label><input type="radio" name="q7" value="d"><span class="letra-opcao">D)</span> addEventListener()</label>
+                <label><input type="radio" name="q7" value="e"><span class="letra-opcao">E)</span> dispatchEvent()</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>8. Qual propriedade e método permite adicionar, remover ou alternar classes CSS de forma prática?</legend>
+                <label><input type="radio" name="q8" value="a" required><span class="letra-opcao">A)</span> element.style.toggle()</label>
+                <label><input type="radio" name="q8" value="b"><span class="letra-opcao">B)</span> element.classList.toggle()</label>
+                <label><input type="radio" name="q8" value="c"><span class="letra-opcao">C)</span> element.className.switch()</label>
+                <label><input type="radio" name="q8" value="d"><span class="letra-opcao">D)</span> element.css.add()</label>
+                <label><input type="radio" name="q8" value="e"><span class="letra-opcao">E)</span> element.setClass()</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>9. Dentro de um listener de formulário, qual método impede o comportamento padrão de recarregar a página?</legend>
+                <label><input type="radio" name="q9" value="a" required><span class="letra-opcao">A)</span> event.stopPropagation()</label>
+                <label><input type="radio" name="q9" value="b"><span class="letra-opcao">B)</span> event.cancelForm()</label>
+                <label><input type="radio" name="q9" value="c"><span class="letra-opcao">C)</span> event.preventDefault()</label>
+                <label><input type="radio" name="q9" value="d"><span class="letra-opcao">D)</span> event.stopImmediate()</label>
+                <label><input type="radio" name="q9" value="e"><span class="letra-opcao">E)</span> event.returnFalse()</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>10. Qual método remove diretamente um elemento selecionado da árvore do DOM?</legend>
+                <label><input type="radio" name="q10" value="a" required><span class="letra-opcao">A)</span> elemento.delete()</label>
+                <label><input type="radio" name="q10" value="b"><span class="letra-opcao">B)</span> elemento.destroy()</label>
+                <label><input type="radio" name="q10" value="c"><span class="letra-opcao">C)</span> elemento.clear()</label>
+                <label><input type="radio" name="q10" value="d"><span class="letra-opcao">D)</span> elemento.detach()</label>
+                <label><input type="radio" name="q10" value="e"><span class="letra-opcao">E)</span> elemento.remove()</label>
             </fieldset>
 
             <button type="submit">Enviar respostas</button>

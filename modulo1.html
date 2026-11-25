@@ -38,20 +38,59 @@
     </nav>
 
     <main>
-        <h2>Módulo 1: Introdução e Variáveis</h2>
-        <p>JavaScript permite que você crie conteúdo com atualização dinâmica. O primeiro passo é entender como armazenar informações na memória.</p>
-        
+        <h2>Módulo 1: Variáveis e Fundamentos</h2>
+        <p>JavaScript dá vida e interatividade às páginas web. Para dominar a linguagem, começamos aprendendo como guardar dados na memória, comparar valores e entender como os tipos funcionam por baixo dos panos.</p>
+
+        <h3>1. Declarando Variáveis (<code>const</code>, <code>let</code> e <code>var</code>)</h3>
+        <p>Variáveis são caixas etiquetadas na memória do computador:</p>
+        <ul>
+            <li><strong><code>const</code></strong>: cria uma constante cujo valor <strong>não pode ser reatribuído</strong> depois de definido. É a escolha padrão no dia a dia.</li>
+            <li><strong><code>let</code></strong>: cria uma variável que permite trocar seu valor ao longo do programa. Se você declarar <code>let x;</code> sem valor inicial, ela recebe automaticamente <code>undefined</code>.</li>
+            <li><strong><code>var</code></strong>: forma antiga de declarar variáveis, evitada em códigos modernos por problemas de escopo.</li>
+        </ul>
+
         <div class="bloco-codigo">
             <code>
-                <span class="palavra-chave">let</span> nome = <span class="texto">"Desenvolvedor"</span>;<br>
-                <span class="palavra-chave">const</span> versao = <span class="numero">6</span>;<br>
-                <span class="palavra-chave">var</span> obsoleto = <span class="booleano">true</span>;
+                <span class="palavra-chave">const</span> linguagem = <span class="texto">"JavaScript"</span>; <span class="comentario">// Não pode ser reatribuída</span><br>
+                <span class="palavra-chave">let</span> pontos = <span class="numero">0</span>; <span class="comentario">// Pode mudar depois</span><br>
+                <span class="palavra-chave">let</span> semValor; <span class="comentario">// Vale undefined por padrão</span>
+            </code>
+        </div>
+
+        <h3>2. Tipos Primitivos, <code>typeof null</code> e Template Strings</h3>
+        <p>Os dados básicos em JavaScript incluem textos (<em>strings</em>), números (<em>numbers</em>), lógicos (<em>booleans</em>), <code>undefined</code> e <code>null</code> (ausência intencional de valor). Uma curiosidade histórica da linguagem é que <code>typeof null</code> retorna <code>"object"</code> devido a um bug legado mantido por compatibilidade.</p>
+        <p>Para montar textos dinâmicos sem precisar somar várias strings, usamos <strong>Template Strings</strong> com crases (<code>` `</code>) e a sintaxe <code>${variavel}</code> para interpolação.</p>
+
+        <div class="bloco-codigo">
+            <code>
+                <span class="palavra-chave">const</span> aluno = <span class="texto">"Ana"</span>;<br>
+                <span class="palavra-chave">const</span> saudacao = <span class="texto">`Olá, ${aluno}! Bem-vinda.`</span>;<br>
+                console.log(<span class="palavra-chave">typeof</span> <span class="booleano">null</span>); <span class="comentario">// Exibe: "object"</span>
+            </code>
+        </div>
+
+        <h3>3. Operadores, Conversão de Tipos e Coerção</h3>
+        <ul>
+            <li><strong>Igualdade Estrita (<code>===</code>) vs. Solta (<code>==</code>)</strong>: o operador <code>===</code> compara <strong>valor e tipo</strong> sem converter nada automaticamente, evitando erros inesperados.</li>
+            <li><strong>Resto da Divisão (<code>%</code>)</strong>: retorna o que sobra de uma divisão inteira (ex: <code>10 % 3</code> resulta em <code>1</code>).</li>
+            <li><strong>Concatenação vs. Soma</strong>: ao usar <code>+</code> entre texto e número, como em <code>"5" + 3</code>, o JavaScript converte o número em texto e junta ambos, resultando em <code>"53"</code>.</li>
+            <li><strong>Conversão Explícita</strong>: a função <code>parseInt("42px")</code> lê o início do texto e extrai o número inteiro <code>42</code>.</li>
+        </ul>
+
+        <h3>4. Valores <em>Truthy</em>, <em>Falsy</em> e Depuração</h3>
+        <p>Em testes lógicos, valores como <code>0</code>, <code>""</code> (string vazia), <code>null</code>, <code>undefined</code> e <code>NaN</code> se comportam como falsos (<em>falsy</em>). Qualquer string não vazia — inclusive o texto <code>"false"</code> — é avaliada como verdadeira (<em>truthy</em>).</p>
+        <p>Para inspecionar variáveis e depurar o código durante o desenvolvimento, usamos <code>console.log()</code> no painel do desenvolvedor do navegador.</p>
+
+        <div class="bloco-codigo">
+            <code>
+                console.log(<span class="numero">5</span> === <span class="texto">"5"</span>); <span class="comentario">// false (tipos diferentes)</span><br>
+                console.log(<span class="texto">"5"</span> + <span class="numero">3</span>); <span class="comentario">// "53" (concatenação)</span><br>
+                console.log(parseInt(<span class="texto">"42px"</span>)); <span class="comentario">// 42</span><br>
+                console.log(Boolean(<span class="texto">"false"</span>)); <span class="comentario">// true (string não vazia é truthy)</span>
             </code>
         </div>
 
         <h3>Na prática</h3>
-        <p>Clique no botão abaixo para disparar seu primeiro alerta nativo utilizando a função <code>alert()</code> do JavaScript.</p>
-        <button onclick="executarExemplo1()">Executar Alerta</button>
         <button type="button" onclick="window.location.href='prova-M1.html'">Avaliação de Fixação</button>
     </main>
 

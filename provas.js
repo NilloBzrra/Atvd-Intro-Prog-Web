@@ -1,10 +1,11 @@
 const formQuiz = document.getElementById('formQuiz');
 
+// Gabaritos para cada módulo (10 questões por módulo)
 const gabaritos = {
-    m1: ['c', 'c', 'd', 'b', 'c'],
-    m2: ['a', 'a', 'c', 'c', 'a'],
-    m3: ['b', 'b', 'c', 'a', 'a'],
-    m4: ['b', 'd', 'c', 'b', 'a']
+    m1: ['c', 'c', 'd', 'b', 'd', 'b', 'b', 'c', 'd', 'e'],
+    m2: ['a', 'a', 'c', 'c', 'd', 'd', 'a', 'c', 'a', 'c'],
+    m3: ['b', 'b', 'a', 'c', 'a', 'a', 'd', 'b', 'c', 'e'],
+    m4: ['b', 'd', 'c', 'b', 'a', 'd', 'b', 'c', 'b', 'e']
 };
 
 if (formQuiz) {
@@ -29,12 +30,16 @@ if (formQuiz) {
             const marcada = formQuiz.querySelector('input[name="' + numeroQuestao + '"]:checked');
             const correta = formQuiz.querySelector('input[name="' + numeroQuestao + '"][value="' + letraCerta + '"]');
 
-            correta.parentElement.classList.add('correta');
+            if (correta) {
+                correta.parentElement.classList.add('correta');
+            }
 
-            if (marcada.value === letraCerta) {
-                acertos++;
-            } else {
-                marcada.parentElement.classList.add('errada');
+            if (marcada) {
+                if (marcada.value === letraCerta) {
+                    acertos++;
+                } else {
+                    marcada.parentElement.classList.add('errada');
+                }
             }
         }
 

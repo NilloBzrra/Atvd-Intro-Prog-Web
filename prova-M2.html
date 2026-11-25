@@ -12,54 +12,99 @@
             <a href="modulo2.html" class="btn-voltar">← Voltar ao módulo</a>
             <br>
             <span class="etiqueta-quiz">Avaliação</span>
-            <h1>Estruturas de Controle</h1>
-            <p class="subtitulo-quiz">Responda às 5 questões e confira seu desempenho.</p>
+            <h1>Estruturas de Controle e Fluxo</h1>
+            <p class="subtitulo-quiz">Responda às 10 questões e confira seu desempenho.</p>
         </div>
 
         <form id="formQuiz">
             <fieldset>
-                <legend>1. Qual estrutura executa um bloco somente quando uma condição é verdadeira?</legend>
+                <legend>1. Qual estrutura executa um bloco de código somente quando uma condição é avaliada como verdadeira?</legend>
                 <label><input type="radio" name="q1" value="a" required><span class="letra-opcao">A)</span> if</label>
                 <label><input type="radio" name="q1" value="b"><span class="letra-opcao">B)</span> for</label>
                 <label><input type="radio" name="q1" value="c"><span class="letra-opcao">C)</span> while</label>
-                <label><input type="radio" name="q1" value="d"><span class="letra-opcao">D)</span> function</label>
-                <label><input type="radio" name="q1" value="e"><span class="letra-opcao">E)</span> return</label>
+                <label><input type="radio" name="q1" value="d"><span class="letra-opcao">D)</span> switch</label>
+                <label><input type="radio" name="q1" value="e"><span class="letra-opcao">E)</span> break</label>
             </fieldset>
 
             <fieldset>
-                <legend>2. Qual palavra-chave permite comparar vários valores de uma expressão?</legend>
+                <legend>2. Qual palavra-chave permite testar múltiplos casos exatos para uma mesma expressão?</legend>
                 <label><input type="radio" name="q2" value="a" required><span class="letra-opcao">A)</span> switch</label>
-                <label><input type="radio" name="q2" value="b"><span class="letra-opcao">B)</span> break</label>
-                <label><input type="radio" name="q2" value="c"><span class="letra-opcao">C)</span> else</label>
-                <label><input type="radio" name="q2" value="d"><span class="letra-opcao">D)</span> try</label>
-                <label><input type="radio" name="q2" value="e"><span class="letra-opcao">E)</span> catch</label>
+                <label><input type="radio" name="q2" value="b"><span class="letra-opcao">B)</span> else if</label>
+                <label><input type="radio" name="q2" value="c"><span class="letra-opcao">C)</span> try</label>
+                <label><input type="radio" name="q2" value="d"><span class="letra-opcao">D)</span> for</label>
+                <label><input type="radio" name="q2" value="e"><span class="letra-opcao">E)</span> continue</label>
             </fieldset>
 
             <fieldset>
-                <legend>3. Qual loop é mais adequado quando o número de repetições já é conhecido?</legend>
+                <legend>3. Qual laço de repetição é mais indicado quando o número de iterações já é conhecido previamente?</legend>
                 <label><input type="radio" name="q3" value="a" required><span class="letra-opcao">A)</span> while</label>
-                <label><input type="radio" name="q3" value="b"><span class="letra-opcao">B)</span> do while</label>
+                <label><input type="radio" name="q3" value="b"><span class="letra-opcao">B)</span> do...while</label>
                 <label><input type="radio" name="q3" value="c"><span class="letra-opcao">C)</span> for</label>
-                <label><input type="radio" name="q3" value="d"><span class="letra-opcao">D)</span> if</label>
+                <label><input type="radio" name="q3" value="d"><span class="letra-opcao">D)</span> if...else</label>
                 <label><input type="radio" name="q3" value="e"><span class="letra-opcao">E)</span> switch</label>
             </fieldset>
 
             <fieldset>
-                <legend>4. Qual instrução interrompe imediatamente a execução de um loop ou switch?</legend>
+                <legend>4. Qual instrução encerra imediatamente um laço de repetição ou um bloco <code>switch</code>?</legend>
                 <label><input type="radio" name="q4" value="a" required><span class="letra-opcao">A)</span> stop</label>
-                <label><input type="radio" name="q4" value="b"><span class="letra-opcao">B)</span> exit</label>
+                <label><input type="radio" name="q4" value="b"><span class="letra-opcao">B)</span> continue</label>
                 <label><input type="radio" name="q4" value="c"><span class="letra-opcao">C)</span> break</label>
-                <label><input type="radio" name="q4" value="d"><span class="letra-opcao">D)</span> close</label>
-                <label><input type="radio" name="q4" value="e"><span class="letra-opcao">E)</span> return</label>
+                <label><input type="radio" name="q4" value="d"><span class="letra-opcao">D)</span> exit</label>
+                <label><input type="radio" name="q4" value="e"><span class="letra-opcao">E)</span> skip</label>
             </fieldset>
 
             <fieldset>
-                <legend>5. Qual palavra-chave é usada para executar outra opção após uma condição if falsa?</legend>
-                <label><input type="radio" name="q5" value="a" required><span class="letra-opcao">A)</span> else</label>
+                <legend>5. Qual instrução pula apenas a iteração atual de um loop e avança para a próxima?</legend>
+                <label><input type="radio" name="q5" value="a" required><span class="letra-opcao">A)</span> break</label>
                 <label><input type="radio" name="q5" value="b"><span class="letra-opcao">B)</span> next</label>
-                <label><input type="radio" name="q5" value="c"><span class="letra-opcao">C)</span> case</label>
-                <label><input type="radio" name="q5" value="d"><span class="letra-opcao">D)</span> default</label>
-                <label><input type="radio" name="q5" value="e"><span class="letra-opcao">E)</span> continue</label>
+                <label><input type="radio" name="q5" value="c"><span class="letra-opcao">C)</span> return</label>
+                <label><input type="radio" name="q5" value="d"><span class="letra-opcao">D)</span> continue</label>
+                <label><input type="radio" name="q5" value="e"><span class="letra-opcao">E)</span> pass</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>6. Qual estrutura de repetição garante que o bloco de código seja executado pelo menos uma vez antes de testar a condição?</legend>
+                <label><input type="radio" name="q6" value="a" required><span class="letra-opcao">A)</span> for</label>
+                <label><input type="radio" name="q6" value="b"><span class="letra-opcao">B)</span> while</label>
+                <label><input type="radio" name="q6" value="c"><span class="letra-opcao">C)</span> for...in</label>
+                <label><input type="radio" name="q6" value="d"><span class="letra-opcao">D)</span> do...while</label>
+                <label><input type="radio" name="q6" value="e"><span class="letra-opcao">E)</span> if</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>7. Qual expressão representa corretamente o operador condicional ternário em JavaScript?</legend>
+                <label><input type="radio" name="q7" value="a" required><span class="letra-opcao">A)</span> condicao ? valorSeVerdadeiro : valorSeFalso</label>
+                <label><input type="radio" name="q7" value="b"><span class="letra-opcao">B)</span> condicao : valorSeVerdadeiro ? valorSeFalso</label>
+                <label><input type="radio" name="q7" value="c"><span class="letra-opcao">C)</span> condicao ?? valorSeVerdadeiro : valorSeFalso</label>
+                <label><input type="radio" name="q7" value="d"><span class="letra-opcao">D)</span> if (condicao) ? valorSeVerdadeiro : valorSeFalso</label>
+                <label><input type="radio" name="q7" value="e"><span class="letra-opcao">E)</span> condicao -&gt; valorSeVerdadeiro | valorSeFalso</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>8. Dentro de um bloco <code>switch</code>, qual cláusula é executada quando nenhum <code>case</code> corresponde ao valor avaliado?</legend>
+                <label><input type="radio" name="q8" value="a" required><span class="letra-opcao">A)</span> else</label>
+                <label><input type="radio" name="q8" value="b"><span class="letra-opcao">B)</span> fallback</label>
+                <label><input type="radio" name="q8" value="c"><span class="letra-opcao">C)</span> default</label>
+                <label><input type="radio" name="q8" value="d"><span class="letra-opcao">D)</span> other</label>
+                <label><input type="radio" name="q8" value="e"><span class="letra-opcao">E)</span> finally</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>9. Qual laço é projetado para percorrer diretamente os valores de um objeto iterável, como um Array?</legend>
+                <label><input type="radio" name="q9" value="a" required><span class="letra-opcao">A)</span> for...of</label>
+                <label><input type="radio" name="q9" value="b"><span class="letra-opcao">B)</span> switch...case</label>
+                <label><input type="radio" name="q9" value="c"><span class="letra-opcao">C)</span> if...else</label>
+                <label><input type="radio" name="q9" value="d"><span class="letra-opcao">D)</span> try...catch</label>
+                <label><input type="radio" name="q9" value="e"><span class="letra-opcao">E)</span> foreach...in</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>10. Qual operador lógico retorna <code>true</code> somente quando ambas as condições são verdadeiras?</legend>
+                <label><input type="radio" name="q10" value="a" required><span class="letra-opcao">A)</span> ||</label>
+                <label><input type="radio" name="q10" value="b"><span class="letra-opcao">B)</span> !</label>
+                <label><input type="radio" name="q10" value="c"><span class="letra-opcao">C)</span> &amp;&amp;</label>
+                <label><input type="radio" name="q10" value="d"><span class="letra-opcao">D)</span> ??</label>
+                <label><input type="radio" name="q10" value="e"><span class="letra-opcao">E)</span> &amp;</label>
             </fieldset>
 
             <button type="submit">Enviar respostas</button>

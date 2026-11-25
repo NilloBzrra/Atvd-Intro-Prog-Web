@@ -13,53 +13,98 @@
             <br>
             <span class="etiqueta-quiz">Avaliação</span>
             <h1>Funções, Parâmetros e Escopo</h1>
-            <p class="subtitulo-quiz">Responda às 5 questões e confira seu desempenho.</p>
+            <p class="subtitulo-quiz">Responda às 10 questões e confira seu desempenho.</p>
         </div>
 
         <form id="formQuiz">
             <fieldset>
-                <legend>1. Qual palavra-chave é usada para criar uma função tradicional em JavaScript?</legend>
+                <legend>1. Qual palavra-chave é usada para declarar uma função tradicional em JavaScript?</legend>
                 <label><input type="radio" name="q1" value="a" required><span class="letra-opcao">A)</span> method</label>
                 <label><input type="radio" name="q1" value="b"><span class="letra-opcao">B)</span> function</label>
                 <label><input type="radio" name="q1" value="c"><span class="letra-opcao">C)</span> def</label>
-                <label><input type="radio" name="q1" value="d"><span class="letra-opcao">D)</span> create</label>
-                <label><input type="radio" name="q1" value="e"><span class="letra-opcao">E)</span> var</label>
+                <label><input type="radio" name="q1" value="d"><span class="letra-opcao">D)</span> func</label>
+                <label><input type="radio" name="q1" value="e"><span class="letra-opcao">E)</span> procedure</label>
             </fieldset>
 
             <fieldset>
-                <legend>2. Qual instrução encerra a função e devolve um resultado para quem a chamou?</legend>
+                <legend>2. Qual instrução encerra a execução de uma função e devolve um valor para quem a chamou?</legend>
                 <label><input type="radio" name="q2" value="a" required><span class="letra-opcao">A)</span> break</label>
-                <label><input type="radio" name="q2" value="b"><span class="letra-opcao">B)</span> send</label>
+                <label><input type="radio" name="q2" value="b"><span class="letra-opcao">B)</span> yield</label>
                 <label><input type="radio" name="q2" value="c"><span class="letra-opcao">C)</span> output</label>
                 <label><input type="radio" name="q2" value="d"><span class="letra-opcao">D)</span> return</label>
                 <label><input type="radio" name="q2" value="e"><span class="letra-opcao">E)</span> console.log</label>
             </fieldset>
 
             <fieldset>
-                <legend>3. Na função <code>function calcularDesconto(valor, percentual = 10)</code>, o que acontece se chamarmos <code>calcularDesconto(200)</code>?</legend>
-                <label><input type="radio" name="q3" value="a" required><span class="letra-opcao">A)</span> Ocorre um erro por falta de parâmetro.</label>
-                <label><input type="radio" name="q3" value="b"><span class="letra-opcao">B)</span> O percentual assume o valor 0.</label>
-                <label><input type="radio" name="q3" value="c"><span class="letra-opcao">C)</span> O percentual assume o valor padrão 10.</label>
-                <label><input type="radio" name="q3" value="d"><span class="letra-opcao">D)</span> A função retorna undefined.</label>
-                <label><input type="radio" name="q3" value="e"><span class="letra-opcao">E)</span> O valor 200 é ignorado.</label>
+                <legend>3. Na função <code>function calcularDesconto(valor, percentual = 10)</code>, o que acontece ao chamar <code>calcularDesconto(200)</code>?</legend>
+                <label><input type="radio" name="q3" value="a" required><span class="letra-opcao">A)</span> Ocorre um erro por falta de argumento.</label>
+                <label><input type="radio" name="q3" value="b"><span class="letra-opcao">B)</span> O parâmetro percentual assume o valor 0.</label>
+                <label><input type="radio" name="q3" value="c"><span class="letra-opcao">C)</span> O parâmetro percentual assume o valor padrão 10.</label>
+                <label><input type="radio" name="q3" value="d"><span class="letra-opcao">D)</span> A função retorna undefined imediatamente.</label>
+                <label><input type="radio" name="q3" value="e"><span class="letra-opcao">E)</span> O argumento 200 é ignorado.</label>
             </fieldset>
 
             <fieldset>
-                <legend>4. Onde uma variável criada dentro de uma função pode ser acessada?</legend>
+                <legend>4. Onde uma variável declarada com <code>let</code> dentro de uma função pode ser acessada?</legend>
                 <label><input type="radio" name="q4" value="a" required><span class="letra-opcao">A)</span> Em qualquer arquivo do projeto.</label>
                 <label><input type="radio" name="q4" value="b"><span class="letra-opcao">B)</span> Apenas dentro da própria função (escopo local).</label>
-                <label><input type="radio" name="q4" value="c"><span class="letra-opcao">C)</span> Apenas fora da função.</label>
+                <label><input type="radio" name="q4" value="c"><span class="letra-opcao">C)</span> Apenas no escopo global.</label>
                 <label><input type="radio" name="q4" value="d"><span class="letra-opcao">D)</span> Somente no arquivo HTML.</label>
-                <label><input type="radio" name="q4" value="e"><span class="letra-opcao">E)</span> Em todas as funções da página.</label>
+                <label><input type="radio" name="q4" value="e"><span class="letra-opcao">E)</span> Em todas as outras funções irmãs.</label>
             </fieldset>
 
             <fieldset>
-                <legend>5. Qual alternativa representa corretamente uma Arrow Function que soma dois números?</legend>
-                <label><input type="radio" name="q5" value="a" required><span class="letra-opcao">A)</span> const somar = (a, b) => a + b;</label>
-                <label><input type="radio" name="q5" value="b"><span class="letra-opcao">B)</span> const somar = (a, b) -> a + b;</label>
+                <legend>5. Qual alternativa representa corretamente uma Arrow Function com retorno implícito que soma dois números?</legend>
+                <label><input type="radio" name="q5" value="a" required><span class="letra-opcao">A)</span> const somar = (a, b) =&gt; a + b;</label>
+                <label><input type="radio" name="q5" value="b"><span class="letra-opcao">B)</span> const somar = (a, b) -&gt; a + b;</label>
                 <label><input type="radio" name="q5" value="c"><span class="letra-opcao">C)</span> arrow somar(a, b) = a + b;</label>
-                <label><input type="radio" name="q5" value="d"><span class="letra-opcao">D)</span> const somar => (a, b) { a + b };</label>
-                <label><input type="radio" name="q5" value="e"><span class="letra-opcao">E)</span> function => somar(a, b) { return a + b; }</label>
+                <label><input type="radio" name="q5" value="d"><span class="letra-opcao">D)</span> const somar =&gt; (a, b) { a + b };</label>
+                <label><input type="radio" name="q5" value="e"><span class="letra-opcao">E)</span> function =&gt; somar(a, b) { return a + b; }</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>6. O que uma função retorna quando chega ao final sem executar nenhuma instrução <code>return</code>?</legend>
+                <label><input type="radio" name="q6" value="a" required><span class="letra-opcao">A)</span> null</label>
+                <label><input type="radio" name="q6" value="b"><span class="letra-opcao">B)</span> 0</label>
+                <label><input type="radio" name="q6" value="c"><span class="letra-opcao">C)</span> false</label>
+                <label><input type="radio" name="q6" value="d"><span class="letra-opcao">D)</span> undefined</label>
+                <label><input type="radio" name="q6" value="e"><span class="letra-opcao">E)</span> ""</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>7. Como o operador Rest (<code>...numeros</code>) agrupa os argumentos extras recebidos por uma função?</legend>
+                <label><input type="radio" name="q7" value="a" required><span class="letra-opcao">A)</span> Em um objeto literal</label>
+                <label><input type="radio" name="q7" value="b"><span class="letra-opcao">B)</span> Em um Array</label>
+                <label><input type="radio" name="q7" value="c"><span class="letra-opcao">C)</span> Em uma String separada por vírgulas</label>
+                <label><input type="radio" name="q7" value="d"><span class="letra-opcao">D)</span> Em um Set</label>
+                <label><input type="radio" name="q7" value="e"><span class="letra-opcao">E)</span> Em um número somado</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>8. Qual é a diferença de escopo entre <code>var</code> e <code>let</code>/<code>const</code> dentro de um bloco <code>if</code>?</legend>
+                <label><input type="radio" name="q8" value="a" required><span class="letra-opcao">A)</span> Ambas têm escopo exclusivo de bloco.</label>
+                <label><input type="radio" name="q8" value="b"><span class="letra-opcao">B)</span> Nenhuma pode ser declarada dentro de blocos if.</label>
+                <label><input type="radio" name="q8" value="c"><span class="letra-opcao">C)</span> <code>var</code> ignora o escopo de bloco (escopo de função/global), enquanto <code>let</code> e <code>const</code> respeitam o escopo de bloco.</label>
+                <label><input type="radio" name="q8" value="d"><span class="letra-opcao">D)</span> <code>let</code> é global e <code>var</code> é restrita ao bloco.</label>
+                <label><input type="radio" name="q8" value="e"><span class="letra-opcao">E)</span> <code>const</code> vaza para fora do bloco, mas <code>let</code> não.</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>9. O que é uma função de <em>callback</em> em JavaScript?</legend>
+                <label><input type="radio" name="q9" value="a" required><span class="letra-opcao">A)</span> Uma função que só pode ser chamada uma única vez no código.</label>
+                <label><input type="radio" name="q9" value="b"><span class="letra-opcao">B)</span> Uma função passada como argumento para outra função, para ser executada posteriormente.</label>
+                <label><input type="radio" name="q9" value="c"><span class="letra-opcao">C)</span> Uma função nativa exclusiva para requisições HTTP.</label>
+                <label><input type="radio" name="q9" value="d"><span class="letra-opcao">D)</span> Uma variável global que armazena o retorno da última função.</label>
+                <label><input type="radio" name="q9" value="e"><span class="letra-opcao">E)</span> Uma função que não aceita parâmetros.</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>10. O que caracteriza uma <em>Closure</em> (fechamento) em JavaScript?</legend>
+                <label><input type="radio" name="q10" value="a" required><span class="letra-opcao">A)</span> O encerramento automático do navegador após um erro de sintaxe.</label>
+                <label><input type="radio" name="q10" value="b"><span class="letra-opcao">B)</span> A exclusão de todas as variáveis globais ao final do script.</label>
+                <label><input type="radio" name="q10" value="c"><span class="letra-opcao">C)</span> Uma função sem nome que não pode acessar variáveis externas.</label>
+                <label><input type="radio" name="q10" value="d"><span class="letra-opcao">D)</span> O bloqueio de reatribuição em objetos criados com const.</label>
+                <label><input type="radio" name="q10" value="e"><span class="letra-opcao">E)</span> A capacidade de uma função interna lembrar e acessar o escopo léxico externo mesmo após a função externa ter finalizado.</label>
             </fieldset>
 
             <button type="submit">Enviar respostas</button>

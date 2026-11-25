@@ -39,20 +39,58 @@
 
     <main>
         <h2>Módulo 3: Manipulação de DOM</h2>
-        <p>O Document Object Model (DOM) permite que o JS interaja com a estrutura HTML, alterando estilos, textos e atributos em tempo real.</p>
-        
+        <p>O <strong>DOM (Document Object Model)</strong> é a representação em árvore de todos os elementos HTML da página. Através do objeto global <code>document</code>, o JavaScript pode ler, modificar, criar e remover elementos em tempo real.</p>
+
+        <h3>1. Selecionando Elementos na Página</h3>
+        <ul>
+            <li><strong><code>document.getElementById("id")</code></strong>: busca um elemento pelo valor exato do seu atributo <code>id</code>.</li>
+            <li><strong><code>document.querySelector("seletor")</code></strong>: retorna o <strong>primeiro</strong> elemento que corresponde a qualquer seletor CSS (como <code>.classe</code>, <code>#id</code> ou <code>button</code>).</li>
+        </ul>
+
+        <h3>2. Alterando Conteúdo e Classes CSS</h3>
+        <ul>
+            <li><strong><code>textContent</code></strong>: altera apenas o texto puro de um elemento sem interpretar tags HTML, o que protege a aplicação contra ataques XSS.</li>
+            <li><strong><code>classList.toggle("classe")</code></strong>: adiciona uma classe CSS se ela não existir no elemento, ou a remove caso já esteja aplicada.</li>
+        </ul>
+
         <div class="bloco-codigo">
             <code>
-                <span class="palavra-chave">const</span> el = document.getElementById(<span class="texto">"alvo"</span>);<br>
-                el.style.backgroundColor = <span class="texto">"#F7DF1E"</span>;
+                <span class="palavra-chave">const</span> titulo = document.querySelector(<span class="texto">"h1"</span>);<br>
+                titulo.textContent = <span class="texto">"Novo Título Seguro"</span>;<br>
+                titulo.classList.toggle(<span class="texto">"destaque"</span>);
+            </code>
+        </div>
+
+        <h3>3. Criando, Inserindo e Removendo Elementos</h3>
+        <p>Você pode construir novos elementos HTML dinamicamente via código:</p>
+        <ul>
+            <li><strong><code>document.createElement("tag")</code></strong>: cria um novo elemento HTML em memória.</li>
+            <li><strong><code>pai.appendChild(filho)</code></strong>: insere o novo elemento dentro de um elemento pai já existente na página.</li>
+            <li><strong><code>elemento.remove()</code></strong>: remove diretamente o elemento selecionado da árvore do DOM.</li>
+        </ul>
+
+        <div class="bloco-codigo">
+            <code>
+                <span class="palavra-chave">const</span> item = document.createElement(<span class="texto">"li"</span>);<br>
+                item.textContent = <span class="texto">"Item adicionado via JS"</span>;<br>
+                document.getElementById(<span class="texto">"lista"</span>).appendChild(item);<br>
+                <span class="comentario">// Para excluir depois: item.remove();</span>
+            </code>
+        </div>
+
+        <h3>4. Eventos e Formulários (<code>addEventListener</code> e <code>preventDefault</code>)</h3>
+        <p>Para reagir às ações do usuário (cliques, teclas, envios), registramos ouvintes com <code>addEventListener("evento", funcao)</code>. Em formulários, o método <code>event.preventDefault()</code> bloqueia o recarregamento padrão da página para que possamos validar ou processar os dados com JavaScript.</p>
+
+        <div class="bloco-codigo">
+            <code>
+                form.addEventListener(<span class="texto">"submit"</span>, (event) => {<br>
+                &nbsp;&nbsp;event.preventDefault(); <span class="comentario">// Evita recarregar a página</span><br>
+                &nbsp;&nbsp;console.log(<span class="texto">"Formulário enviado com sucesso!"</span>);<br>
+                });
             </code>
         </div>
 
         <h3>Na prática</h3>
-        <p>Clique no botão para injetar novas classes CSS e alterar o conteúdo da caixa abaixo:</p>
-        <div id="caixaDOM" class="caixa-resultado visivel">Aguardando interação...</div>
-        <br>
-        <button onclick="executarExemplo3()">Transformar Elemento</button>
         <button type="button" onclick="window.location.href='prova-M3.html'">Avaliação de Fixação</button>
     </main>
 
